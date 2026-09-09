@@ -1,0 +1,24 @@
+[
+  {
+    "id": "cert-1",
+    "slug": "google-data-analytics",
+    "name": "Google Data Analytics Professional Certificate",
+    "issuer": "Google",
+    "issueDate": "2026-06",
+    "expiryDate": "2029-06",
+    "credentialId": "GDA123456789",
+    "credentialUrl": "https://coursera.org/verify/professional-cert/GDA",
+    "image": "/images/certifications/cert1.jpg"
+  },
+  {
+    "id": "cert-2",
+    "slug": "aws-cloud-practitioner",
+    "name": "AWS Certified Cloud Practitioner",
+    "issuer": "Amazon Web Services",
+    "issueDate": "2026-02",
+    "expiryDate": "2029-02",
+    "credentialId": "AWS987654321",
+    "credentialUrl": "https://aws.amazon.com/verification",
+    "image": "/images/certifications/cert2.jpg"
+  }
+]

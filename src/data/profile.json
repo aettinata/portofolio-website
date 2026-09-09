@@ -1,0 +1,26 @@
+{
+  "name": "Faisal Adama",
+  "title": "Fresh Graduate IT | Web Developer",
+  "tagline": "Membangun solusi digital yang berdampak",
+  "bio": "Lulusan IT dengan minat besar dalam pengembangan web modern dan desain antarmuka pengguna.",
+  "education": [
+    {
+      "degree": "S1 Teknik Informatika",
+      "institution": "Universitas Negeri Semarang",
+      "year": "2022-2026"
+    }
+  ],
+  "skills": [
+    "TypeScript",
+    "React",
+    "Next.js",
+    "Tailwind CSS",
+    "Framer Motion",
+    "Node.js"
+  ],
+  "interests": [
+    "UI/UX Design",
+    "Open Source",
+    "Artificial Intelligence"
+  ]
+}

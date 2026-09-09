@@ -1,0 +1,32 @@
+[
+  {
+    "id": "project-1",
+    "slug": "portfolio-v1",
+    "title": "Website Portofolio V1",
+    "description": "Website portofolio pribadi modern menggunakan Next.js dan Tailwind CSS.",
+    "fullDescription": "Proyek ini adalah iterasi pertama dari portofolio pribadi saya. Fokus utama adalah performa, desain yang responsif, dan efek visual yang menarik menggunakan Framer Motion.",
+    "challenges": "Mengimplementasikan dark mode secara efisien tanpa efek berkedip saat pertama kali muat (FOUC) dan membuat animasi scroll yang halus.",
+    "solutions": "Menggunakan 'next-themes' untuk manajemen tema yang mulus dan memanfaatkan komponen wrapper khusus untuk integrasi Framer Motion yang mudah.",
+    "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+    "image": "/images/projects/project1.jpg",
+    "demoUrl": "https://demo-portofolio.vercel.app",
+    "githubUrl": "https://github.com/username/portfolio",
+    "category": "Web",
+    "date": "2026-09"
+  },
+  {
+    "id": "project-2",
+    "slug": "ecommerce-dashboard",
+    "title": "E-Commerce Dashboard",
+    "description": "Dashboard admin untuk mengelola inventaris dan pesanan toko online.",
+    "fullDescription": "Dashboard lengkap dengan visualisasi data, manajemen pengguna, dan integrasi API RESTful.",
+    "challenges": "Mengelola state yang kompleks untuk filter dan pagination data yang besar.",
+    "solutions": "Menggunakan React Query untuk manajemen state data dari server dan optimasi rendering dengan memoization.",
+    "technologies": ["React", "TypeScript", "Tailwind CSS", "Recharts"],
+    "image": "/images/projects/project2.jpg",
+    "demoUrl": "https://demo-dashboard.vercel.app",
+    "githubUrl": "https://github.com/username/dashboard",
+    "category": "Web",
+    "date": "2026-05"
+  }
+]
