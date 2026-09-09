@@ -20,29 +20,32 @@
 ---
 
 ## 📂 Struktur Proyek
+
+```bash
 portfolio-website/
 ├── public/
-│ └── images/ # Gambar profil, proyek, dan sertifikasi
+│   └── images/              # Gambar profil, proyek, dan sertifikasi
 ├── src/
-│ ├── app/
-│ │ ├── (routes)/ # Halaman: /, /about, /projects, /certifications, /contact
-│ │ ├── layout.tsx # Layout utama dengan ThemeProvider
-│ │ └── globals.css # Gaya global dengan variabel CSS
-│ ├── components/
-│ │ ├── ui/ # Komponen reusable: Header, Footer, Button, Card
-│ │ ├── sections/ # Komponen per halaman: Hero, ProjectGrid, dll.
-│ │ └── animations/ # Komponen animasi FadeIn
-│ ├── data/
-│ │ ├── profile.json # Data diri, bio, skills
-│ │ ├── projects.json # Daftar proyek
-│ │ └── certifications.json # Daftar sertifikasi
-│ └── lib/
-│ └── utils.ts # Fungsi bantu
-├── .env.local # Environment variables (jangan commit!)
+│   ├── app/
+│   │   ├── (routes)/        # Halaman: /, /about, /projects, /certifications, /contact
+│   │   ├── layout.tsx       # Layout utama dengan ThemeProvider
+│   │   └── globals.css      # Gaya global dengan variabel CSS
+│   ├── components/
+│   │   ├── ui/              # Komponen reusable: Header, Footer, Button, Card
+│   │   ├── sections/        # Komponen per halaman: Hero, ProjectGrid, dll.
+│   │   └── animations/      # Komponen animasi FadeIn
+│   ├── data/
+│   │   ├── profile.json     # Data diri, bio, skills
+│   │   ├── projects.json    # Daftar proyek
+│   │   └── certifications.json # Daftar sertifikasi
+│   └── lib/
+│       └── utils.ts         # Fungsi bantu
+├── .env.local               # Environment variables (jangan commit!)
 ├── next.config.ts
 ├── tailwind.config.ts
 ├── tsconfig.json
 └── package.json
+```
 
 ---
 
@@ -69,52 +72,68 @@ portfolio-website/
 ### Langkah-langkah
 
 1. **Clone repository**
-    ```bash
-    git clone https://github.com/username/portfolio-website.git
-    cd portfolio-website
+   ```bash
+   git clone https://github.com/username/portfolio-website.git
+   cd portfolio-website
+   ```
 
-2. **Install dependencies**    
-    ```bash
-    npm install
-    ```
-    # atau
-    ```bash
-    yarn install
-    ```
+2. **Install dependencies**
+   ```bash
+   npm install
+   # atau
+   yarn install
+   ```
 
 3. **Jalankan development server**
-    ```bash   
-    npm run dev
+   ```bash
+   npm run dev
+   ```
 
-4. **Buka browser di http://localhost:3000**
+4. **Buka browser** di `http://localhost:3000`
+
+### Build untuk Produksi
+```bash
+npm run build
+npm start
+```
 
 ---
 
 ## 📦 Deployment
-Proyek ini di-deploy menggunakan Vercel. Setiap kali ada push ke branch main, Vercel akan otomatis melakukan build dan deploy.
+
+Proyek ini di-deploy menggunakan **Vercel**. Setiap kali ada push ke branch `main`, Vercel akan otomatis melakukan build dan deploy.
 
 ### Langkah manual:
-
-1. **Push kode ke GitHub.**
-
-2. **Buka Vercel dan hubungkan dengan repository ini.**
-
-3. **Vercel akan mendeteksi Next.js dan melakukan deploy secara otomatis.**
+1. Push kode ke GitHub.
+2. Buka [Vercel](https://vercel.com) dan hubungkan dengan repository ini.
+3. Vercel akan mendeteksi Next.js dan melakukan deploy secara otomatis.
 
 ---
 
 ## 🧑‍💻 Tentang Saya
+
 Halo! Saya **Faisal Adama**, fresh graduate IT dengan minat besar dalam pengembangan web modern dan desain antarmuka pengguna. Saya suka membangun solusi digital yang berdampak dan terus belajar teknologi baru.
 
-### 🌐 Website
-
-### 🐙 GitHub
-
-### 💼 LinkedIn
-
-### 🐦 Twitter/X
+- 🌐 [Website](https://portfolio-faisal.vercel.app)
+- 🐙 [GitHub](https://github.com/username)
+- 💼 [LinkedIn](https://linkedin.com/in/username)
+- 🐦 [Twitter/X](https://twitter.com/username)
 
 ---
 
 ## 📄 Lisensi
-Proyek ini bersifat open-source di bawah lisensi MIT. Silakan gunakan sebagai referensi atau template untuk portofolio pribadimu.
+
+Proyek ini bersifat open-source di bawah lisensi **MIT**. Silakan gunakan sebagai referensi atau template untuk portofolio pribadimu.
+
+---
+
+## 🙏 Ucapan Terima Kasih
+
+- [Next.js](https://nextjs.org) — Framework yang luar biasa.
+- [Vercel](https://vercel.com) — Hosting yang sempurna untuk Next.js.
+- [Tailwind CSS](https://tailwindcss.com) — Styling yang menyenangkan.
+- [Framer Motion](https://www.framer.com/motion/) — Animasi yang mulus.
+
+---
+
+**Dibuat dengan ❤️ oleh Faisal Adama**
