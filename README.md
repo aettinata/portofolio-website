@@ -1,8 +1,8 @@
-# 🌐 Personal Portfolio — [Nama Kamu]
+# 🌐 Personal Portfolio — Faisal Adama
 
 > Sebuah website portofolio modern yang dibangun dengan Next.js 14, TypeScript, dan Tailwind CSS. Menampilkan identitas diri, proyek-proyek, sertifikasi, dan cara untuk terhubung.
 
-🔗 **Live Demo:** [https://portfolio-kamu.vercel.app](https://portfolio-kamu.vercel.app)  
+🔗 **Live Demo:** [https://portfolio-faisal.vercel.app](https://portfolio-faisal.vercel.app)  
 📌 **Status:** Aktif — Terakhir diperbarui: September 2026
 
 ---
@@ -44,8 +44,6 @@ portfolio-website/
 ├── tsconfig.json
 └── package.json
 
-text
-
 ---
 
 ## 🛠️ Teknologi yang Digunakan
@@ -71,57 +69,52 @@ text
 ### Langkah-langkah
 
 1. **Clone repository**
-   ```bash
-   git clone https://github.com/username/portfolio-website.git
-   cd portfolio-website
-Install dependencies
+    ```bash
+    git clone https://github.com/username/portfolio-website.git
+    cd portfolio-website
 
-bash
-npm install
-# atau
-yarn install
-Jalankan development server
+2. **Install dependencies**    
+    ```bash
+    npm install
+    ```
+    # atau
+    ```bash
+    yarn install
+    ```
 
-bash
-npm run dev
-Buka browser di http://localhost:3000
+3. **Jalankan development server**
+    ```bash   
+    npm run dev
 
-Build untuk Produksi
-bash
-npm run build
-npm start
-📦 Deployment
+4. **Buka browser di http://localhost:3000**
+
+---
+
+## 📦 Deployment
 Proyek ini di-deploy menggunakan Vercel. Setiap kali ada push ke branch main, Vercel akan otomatis melakukan build dan deploy.
 
-Langkah manual:
+### Langkah manual:
 
-Push kode ke GitHub.
+1. **Push kode ke GitHub.**
 
-Buka Vercel dan hubungkan dengan repository ini.
+2. **Buka Vercel dan hubungkan dengan repository ini.**
 
-Vercel akan mendeteksi Next.js dan melakukan deploy secara otomatis.
+3. **Vercel akan mendeteksi Next.js dan melakukan deploy secara otomatis.**
 
-🧑‍💻 Tentang Saya
-Halo! Saya [Nama Kamu] , [sebutkan statusmu, misal: fresh graduate IT] dengan minat besar dalam pengembangan web modern dan desain antarmuka pengguna. Saya suka membangun solusi digital yang berdampak dan terus belajar teknologi baru.
+---
 
-🌐 Website
+## 🧑‍💻 Tentang Saya
+Halo! Saya **Faisal Adama**, fresh graduate IT dengan minat besar dalam pengembangan web modern dan desain antarmuka pengguna. Saya suka membangun solusi digital yang berdampak dan terus belajar teknologi baru.
 
-🐙 GitHub
+### 🌐 Website
 
-💼 LinkedIn
+### 🐙 GitHub
 
-🐦 Twitter/X
+### 💼 LinkedIn
 
-📄 Lisensi
+### 🐦 Twitter/X
+
+---
+
+## 📄 Lisensi
 Proyek ini bersifat open-source di bawah lisensi MIT. Silakan gunakan sebagai referensi atau template untuk portofolio pribadimu.
-
-🙏 Ucapan Terima Kasih
-Next.js — Framework yang luar biasa.
-
-Vercel — Hosting yang sempurna untuk Next.js.
-
-Tailwind CSS — Styling yang menyenangkan.
-
-Framer Motion — Animasi yang mulus.
-
-Dibuat dengan ❤️ oleh [Nama Kamu]
