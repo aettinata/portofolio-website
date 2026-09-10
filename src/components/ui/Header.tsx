@@ -1,73 +1,58 @@
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
-import { NavItem } from "@/types";
-
-const NAV_LINKS: NavItem<string>[] = [
-  { name: "Beranda", href: "/" },
-  { name: "Tentang", href: "/about" },
-  { name: "Portofolio", href: "/projects" },
-  { name: "Kontak", href: "/contact" },
-];
+import { usePathname } from "next/navigation";
+import { Button } from "./Button";
+import { ThemeToggle } from "./ThemeToggle";
+import { Download } from "lucide-react";
 
 export function Header() {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
+
+  const links = [
+    { name: "Beranda", href: "/" },
+    { name: "Tentang", href: "/about" },
+    { name: "Portofolio", href: "/projects" },
+    { name: "Sertifikasi", href: "/certifications" },
+    { name: "Kontak", href: "/contact" },
+  ];
 
   return (
-    <header className="sticky top-0 z-40 w-full border-b border-brand-border/80 bg-brand-dark/80 backdrop-blur-md">
-      <div className="container mx-auto max-w-[1200px] px-6 sm:px-12 lg:px-20">
-        <div className="flex h-16 items-stretch justify-between">
-          {/* Logo */}
-          <Link href="/" className="flex items-center text-xl font-heading font-bold uppercase tracking-widest text-brand-light group cursor-pointer">
-            Portofolio<span className="animate-blink text-brand-accent">_</span>
+    <header className="sticky top-0 z-40 w-full glass-panel">
+      <div className="container mx-auto max-w-[1024px] px-6 sm:px-12">
+        <div className="flex h-14 items-center justify-between">
+          <Link href="/" className="text-lg font-semibold tracking-tight text-text-primary group cursor-pointer transition-opacity hover:opacity-70">
+            Faisal Adama
           </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-stretch border-l border-brand-border/80">
-            {NAV_LINKS.map((link) => (
-              <Link
-                key={link.name}
-                href={link.href}
-                className="relative flex items-center px-6 border-r border-brand-border/80 text-sm font-heading font-bold uppercase tracking-widest text-brand-dim hover:text-brand-light cursor-pointer transition-colors duration-300 after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:h-[2px] after:w-0 after:bg-brand-accent after:transition-all after:duration-300 hover:after:w-full"
-              >
-                {link.name}
-              </Link>
-            ))}
+          <nav className="hidden md:flex items-center space-x-6">
+            {links.map((link) => {
+              const isActive = pathname === link.href || (link.href !== "/" && pathname?.startsWith(link.href));
+              
+              return (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  className={`relative text-[13px] font-medium tracking-wide transition-colors duration-200 py-2 ${
+                    isActive ? "text-text-primary" : "text-text-secondary hover:text-text-primary"
+                  }`}
+                >
+                  {link.name}
+                </Link>
+              );
+            })}
           </nav>
 
-          {/* Mobile Menu Button */}
-          <div className="md:hidden flex items-center border-l border-brand-border/80 pl-6">
-            <button
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-brand-dim hover:text-brand-light cursor-pointer transition-colors duration-300"
-              aria-label={isMobileMenuOpen ? "Tutup menu" : "Buka menu"}
-              aria-expanded={isMobileMenuOpen}
-            >
-              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
+          <div className="flex items-center gap-2">
+            <ThemeToggle />
+            <a href="/resume.pdf" target="_blank" rel="noreferrer">
+              <Button variant="primary" className="h-8 px-4 py-0 text-[12px] gap-2 ml-2">
+                <Download size={14} /> Resume
+              </Button>
+            </a>
           </div>
         </div>
       </div>
-
-      {/* Mobile Navigation */}
-      {isMobileMenuOpen && (
-        <div className="md:hidden border-t border-brand-border/80 bg-brand-dark/95 backdrop-blur-md">
-          <div className="flex flex-col">
-            {NAV_LINKS.map((link) => (
-              <Link
-                key={link.name}
-                href={link.href}
-                className="border-b border-brand-border/50 px-6 py-4 text-sm font-heading font-bold uppercase tracking-widest text-brand-dim hover:bg-brand-surface hover:text-brand-light cursor-pointer transition-colors duration-300"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                {link.name}
-              </Link>
-            ))}
-          </div>
-        </div>
-      )}
     </header>
   );
 }

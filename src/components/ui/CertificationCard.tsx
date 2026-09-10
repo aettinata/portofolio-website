@@ -14,19 +14,19 @@ interface CertificationCardProps {
 
 export function CertificationCard({ cert }: CertificationCardProps) {
   return (
-    <div className="group relative flex flex-col justify-between border border-brand-border bg-brand-surface/50 p-5 hover:border-brand-accent/50 hover:bg-brand-surface transition-all duration-300 card-futuristic">
+    <div className="group flex flex-col justify-between bg-bg-secondary p-6 rounded-[18px] transition-all duration-300 hover:shadow-[0_4px_24px_rgba(0,0,0,0.06)] h-full">
       <div>
-        <div className="mb-4 flex h-10 w-10 items-center justify-center border border-brand-border text-brand-dim group-hover:text-brand-accent group-hover:border-brand-accent/50 group-hover:glow-cyan transition-colors duration-300">
-          <span className="text-lg font-heading font-bold">{cert.issuer.charAt(0)}</span>
+        <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-[0_2px_8px_rgba(0,0,0,0.04)] text-text-secondary group-hover:text-accent transition-colors duration-300">
+          <span className="text-[20px] font-semibold">{cert.issuer.charAt(0)}</span>
         </div>
         
         <Link href={`/certifications/${cert.slug}`}>
-          <h3 className="text-sm font-heading font-bold uppercase tracking-widest text-brand-light group-hover:text-brand-accent transition-colors duration-300 cursor-pointer">
+          <h3 className="text-card-title text-text-primary group-hover:text-accent transition-colors duration-200 cursor-pointer mb-2">
             {cert.name}
           </h3>
         </Link>
-        <p className="mt-2 text-xs text-brand-gray">{cert.issuer}</p>
-        <p className="mt-1 text-[10px] font-heading tracking-widest text-brand-dim">DITERBITKAN: {cert.issueDate}</p>
+        <p className="text-[15px] font-medium text-text-secondary">{cert.issuer}</p>
+        <p className="mt-1 text-[13px] text-text-secondary opacity-80">Diterbitkan: {cert.issueDate}</p>
       </div>
 
       {cert.credentialUrl && (
@@ -34,14 +34,11 @@ export function CertificationCard({ cert }: CertificationCardProps) {
           href={cert.credentialUrl}
           target="_blank"
           rel="noreferrer"
-          className="mt-5 flex items-center gap-2 text-[10px] font-heading font-bold uppercase tracking-widest text-brand-dim hover:text-brand-accent transition-colors duration-300 cursor-pointer"
+          className="mt-6 flex items-center gap-2 text-[14px] font-medium text-accent hover:opacity-80 transition-opacity duration-200 cursor-pointer"
         >
-          Lihat Kredensial <ExternalLink size={12} />
+          Lihat Kredensial <ExternalLink size={14} />
         </a>
       )}
-      
-      {/* Corner accent block */}
-      <div className="absolute top-0 right-0 w-4 h-4 bg-brand-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{ clipPath: 'polygon(100% 0, 0 0, 100% 100%)' }} />
     </div>
   );
 }

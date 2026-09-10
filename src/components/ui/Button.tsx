@@ -1,34 +1,24 @@
-import { ButtonHTMLAttributes, forwardRef } from "react";
-import { cn } from "@/lib/utils";
+import { ButtonHTMLAttributes, ReactNode } from "react";
+import { cn } from "@/lib/utils"; // Assumes clsx and tailwind-merge exist here
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: "primary" | "outline" | "ghost" | "neon";
-  size?: "sm" | "md" | "lg";
+  children: ReactNode;
+  variant?: "primary" | "secondary" | "outline";
+  className?: string;
 }
 
-const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant = "primary", size = "md", ...props }, ref) => {
-    return (
-      <button
-        ref={ref}
-        className={cn(
-          "inline-flex items-center justify-center rounded-[4px] font-heading font-medium uppercase tracking-widest cursor-pointer transition-all duration-300 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-brand-accent disabled:pointer-events-none disabled:opacity-50",
-          {
-            "border border-brand-border bg-transparent text-brand-light hover:border-brand-accent/40 hover:bg-brand-accent/5": variant === "primary",
-            "border border-brand-border bg-transparent text-brand-dim hover:border-brand-light/20 hover:text-brand-gray": variant === "outline",
-            "bg-transparent text-brand-dim hover:text-brand-light": variant === "ghost",
-            "border-[1.5px] border-brand-accent bg-transparent text-brand-accent hover:bg-brand-accent hover:text-brand-dark": variant === "neon",
-            "h-9 px-4 text-xs": size === "sm",
-            "h-10 px-6 py-2 text-sm": size === "md",
-            "h-12 px-8 text-base": size === "lg",
-          },
-          className
-        )}
-        {...props}
-      />
-    );
-  }
-);
-Button.displayName = "Button";
+export function Button({ children, variant = "primary", className, ...props }: ButtonProps) {
+  const baseStyles = "inline-flex items-center justify-center rounded-[980px] px-6 py-3 font-medium transition-colors duration-200";
+  
+  const variants = {
+    primary: "bg-[#0071E3] text-white hover:bg-[#0077ED]",
+    secondary: "bg-bg-secondary text-text-primary hover:bg-[#E8E8ED]",
+    outline: "border border-[#0071E3] text-[#0071E3] hover:bg-[#0071E3] hover:text-white"
+  };
 
-export { Button };
+  return (
+    <button className={cn(baseStyles, variants[variant], className)} {...props}>
+      {children}
+    </button>
+  );
+}
