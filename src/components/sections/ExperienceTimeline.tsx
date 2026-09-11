@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, useReducedMotion } from "framer-motion";
 
 interface ExperienceItem {
   role?: string;
@@ -67,10 +67,11 @@ export function ExperienceTimeline({ education, experience }: ExperienceTimeline
 function TimelineItem({ item, index, isLeft }: { item: ExperienceItem, index: number, isLeft: boolean }) {
   const title = item.role || item.degree;
   const subtitle = item.company || item.institution;
+  const shouldReduceMotion = useReducedMotion();
 
   return (
     <motion.div 
-      initial={{ opacity: 0, y: 30 }}
+      initial={shouldReduceMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }} // Apple ease out
@@ -80,7 +81,7 @@ function TimelineItem({ item, index, isLeft }: { item: ExperienceItem, index: nu
       <div className="absolute left-4 md:left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-bg-primary border-[3px] border-border z-10 transition-colors duration-300 hover:border-accent" />
       
       {/* Content Card */}
-      <div className={`ml-12 md:ml-0 w-full md:w-[45%] p-6 md:p-8 bg-bg-secondary rounded-[18px] transition-all duration-300 hover:shadow-[0_4px_24px_rgba(0,0,0,0.06)] group ${isLeft ? "md:mr-auto" : "md:ml-auto"}`}>
+      <div className={`ml-12 md:ml-0 w-full md:w-[45%] p-6 md:p-8 bg-bg-secondary rounded-2xl transition-all duration-300 hover:shadow-[0_4px_24px_rgba(0,0,0,0.06)] group ${isLeft ? "md:mr-auto" : "md:ml-auto"}`}>
         <span className="inline-block mb-3 text-[12px] font-medium tracking-wide text-text-secondary uppercase">
           {item.year}
         </span>

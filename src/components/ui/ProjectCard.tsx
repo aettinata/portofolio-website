@@ -11,7 +11,7 @@ interface ProjectCardProps {
 export function ProjectCard({ project, className = "" }: ProjectCardProps) {
   return (
     <div
-      className={`group flex flex-col overflow-hidden rounded-[18px] bg-bg-secondary transition-all duration-300 hover:shadow-[0_4px_24px_rgba(0,0,0,0.06)] h-full ${className}`}
+      className={`group flex flex-col overflow-hidden rounded-2xl bg-bg-secondary transition-all duration-300 hover:shadow-[0_4px_24px_rgba(0,0,0,0.06)] h-full ${className}`}
     >
       <div className="relative z-10 flex flex-col h-full">
         <Link href={`/projects/${project.slug}`} className="relative h-48 md:h-64 w-full overflow-hidden block bg-bg-secondary">

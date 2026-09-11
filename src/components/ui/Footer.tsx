@@ -10,9 +10,9 @@ export function Footer() {
       <div className="container mx-auto max-w-[1024px] px-6 sm:px-12">
         <div className="flex flex-col md:flex-row justify-between items-center md:items-start border-b border-border pb-12 mb-8 gap-8">
           <div className="flex flex-col items-center md:items-start text-center md:text-left">
-            <h2 className="text-[24px] font-semibold tracking-tight text-text-primary mb-2">
+            <p className="text-[24px] font-semibold tracking-tight text-text-primary mb-2">
               Faisal Adama
-            </h2>
+            </p>
             <p className="text-[15px] text-text-secondary max-w-sm">
               Membangun solusi digital yang elegan, terukur, dan berdampak melalui kode.
             </p>

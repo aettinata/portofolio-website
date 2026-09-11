@@ -34,7 +34,7 @@ export default function AboutPage() {
       <FadeIn delay={0.1}>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-32">
           <div>
-            <h3 className="text-[14px] font-semibold tracking-wide text-text-secondary mb-6 border-b border-border pb-3 uppercase">Keahlian Teknis</h3>
+            <h2 className="text-[14px] font-semibold tracking-wide text-text-secondary mb-6 border-b border-border pb-3 uppercase">Keahlian Teknis</h2>
             <div className="flex flex-wrap gap-2">
               {profileData.skills.map((skill: string) => (
                 <span key={skill} className="bg-bg-secondary px-4 py-2 rounded-[980px] text-[13px] font-medium tracking-wide text-text-primary">
@@ -44,7 +44,7 @@ export default function AboutPage() {
             </div>
           </div>
           <div>
-            <h3 className="text-[14px] font-semibold tracking-wide text-text-secondary mb-6 border-b border-border pb-3 uppercase">Minat & Eksplorasi</h3>
+            <h2 className="text-[14px] font-semibold tracking-wide text-text-secondary mb-6 border-b border-border pb-3 uppercase">Minat & Eksplorasi</h2>
             <div className="flex flex-wrap gap-2">
               {profileData.interests.map((interest: string) => (
                 <span key={interest} className="bg-bg-primary border border-border px-4 py-2 rounded-[980px] text-[13px] font-medium tracking-wide text-text-primary">

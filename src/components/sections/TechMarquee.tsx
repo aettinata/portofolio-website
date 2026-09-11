@@ -1,13 +1,15 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useReducedMotion } from "framer-motion";
 
 interface TechMarqueeProps {
   items: string[];
 }
 
 export function TechMarquee({ items }: TechMarqueeProps) {
-  // Duplicate items to ensure smooth infinite loop
+  const shouldReduceMotion = useReducedMotion();
+  
+  // For CSS marquee, we duplicate enough to cover the screen width
   const duplicatedItems = [...items, ...items, ...items, ...items];
 
   return (
@@ -16,14 +18,8 @@ export function TechMarquee({ items }: TechMarqueeProps) {
       <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-24 bg-gradient-to-r from-bg-secondary to-transparent"></div>
       <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-24 bg-gradient-to-l from-bg-secondary to-transparent"></div>
 
-      <motion.div
-        className="flex shrink-0 items-center gap-16 px-8"
-        animate={{ x: ["0%", "-50%"] }}
-        transition={{
-          duration: 35,
-          ease: "linear",
-          repeat: Infinity,
-        }}
+      <div
+        className={`flex shrink-0 items-center gap-16 px-8 ${shouldReduceMotion ? '' : 'animate-marquee'}`}
       >
         {duplicatedItems.map((item, index) => (
           <div
@@ -34,7 +30,7 @@ export function TechMarquee({ items }: TechMarqueeProps) {
             <span className="h-1.5 w-1.5 rounded-full bg-border" />
           </div>
         ))}
-      </motion.div>
+      </div>
     </div>
   );
 }

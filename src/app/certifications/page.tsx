@@ -31,7 +31,7 @@ export default function CertificationsPage() {
           </div>
           
           {certsData.length === 0 && (
-            <div className="mt-12 text-center py-16 bg-bg-secondary rounded-[18px]">
+            <div className="mt-12 text-center py-16 bg-bg-secondary rounded-2xl">
               <span className="text-[14px] font-medium tracking-wide text-text-secondary uppercase">Belum ada sertifikasi yang ditambahkan.</span>
             </div>
           )}

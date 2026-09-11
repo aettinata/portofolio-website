@@ -29,7 +29,7 @@ export default function CertificationDetail({ params }: { params: { slug: string
             </Link>
           </FadeIn>
 
-          <div className="bg-bg-secondary rounded-[18px] p-8 md:p-12 overflow-hidden">
+          <div className="bg-bg-secondary rounded-2xl p-8 md:p-12 overflow-hidden">
             <div className="flex flex-col md:flex-row gap-8 items-start">
               <FadeIn delay={0.1} className="w-full md:w-1/3 flex justify-center">
                 <div className="w-32 h-32 md:w-40 md:h-40 rounded-full bg-bg-primary shadow-[0_2px_8px_rgba(0,0,0,0.04)] flex items-center justify-center text-text-secondary text-5xl font-semibold">
