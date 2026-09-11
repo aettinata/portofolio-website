@@ -10,8 +10,9 @@ export async function generateStaticParams() {
   }));
 }
 
-export default function CertificationDetail({ params }: { params: { slug: string } }) {
-  const cert = certsData.find((c) => c.slug === params.slug);
+export default async function CertificationDetail({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const cert = certsData.find((c) => c.slug === slug);
 
   if (!cert) {
     notFound();
