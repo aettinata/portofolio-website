@@ -14,8 +14,8 @@ export function ProjectCard({ project, className = "" }: ProjectCardProps) {
       className={`group flex flex-col overflow-hidden rounded-[18px] bg-bg-secondary transition-all duration-300 hover:shadow-[0_4px_24px_rgba(0,0,0,0.06)] h-full ${className}`}
     >
       <div className="relative z-10 flex flex-col h-full">
-        <Link href={`/projects/${project.slug}`} className="relative h-48 md:h-64 w-full overflow-hidden block bg-white">
-          <div className="absolute inset-0 bg-white flex items-center justify-center transition-transform duration-500 group-hover:scale-[1.02]">
+        <Link href={`/projects/${project.slug}`} className="relative h-48 md:h-64 w-full overflow-hidden block bg-bg-secondary">
+          <div className="absolute inset-0 bg-bg-secondary flex items-center justify-center transition-transform duration-500 group-hover:scale-[1.02]">
             <span className="text-[28px] font-semibold tracking-tight text-border">
               {project.title}
             </span>
@@ -36,13 +36,13 @@ export function ProjectCard({ project, className = "" }: ProjectCardProps) {
             {project.technologies.slice(0, 4).map((tech) => (
               <span
                 key={tech}
-                className="bg-white px-4 py-1.5 text-[12px] rounded-full font-medium tracking-wide text-text-secondary shadow-[0_2px_4px_rgba(0,0,0,0.02)]"
+                className="bg-bg-primary px-4 py-1.5 text-[12px] rounded-full font-medium tracking-wide text-text-secondary shadow-[0_2px_4px_rgba(0,0,0,0.02)]"
               >
                 {tech}
               </span>
             ))}
             {project.technologies.length > 4 && (
-              <span className="bg-white px-4 py-1.5 text-[12px] rounded-full font-medium tracking-wide text-text-secondary shadow-[0_2px_4px_rgba(0,0,0,0.02)]">
+              <span className="bg-bg-primary px-4 py-1.5 text-[12px] rounded-full font-medium tracking-wide text-text-secondary shadow-[0_2px_4px_rgba(0,0,0,0.02)]">
                 +{project.technologies.length - 4}
               </span>
             )}

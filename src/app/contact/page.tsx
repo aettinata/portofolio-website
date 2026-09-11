@@ -43,14 +43,14 @@ export default function ContactPage() {
 
           {/* Social Links */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <a href="https://github.com" target="_blank" rel="noreferrer" className="flex flex-col items-start justify-between p-6 bg-bg-secondary rounded-[18px] transition-colors duration-300 group hover:bg-[#E8E8ED]">
+            <a href="https://github.com" target="_blank" rel="noreferrer" className="flex flex-col items-start justify-between p-6 bg-bg-secondary rounded-[18px] transition-colors duration-300 group hover:bg-border/50">
               <FaGithub size={24} className="text-text-secondary group-hover:text-text-primary mb-6 transition-colors" />
               <div className="flex w-full items-center justify-between">
                 <span className="font-semibold text-[15px] text-text-primary">GitHub</span>
                 <ArrowUpRight size={16} className="text-text-secondary group-hover:text-text-primary transition-colors" />
               </div>
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="flex flex-col items-start justify-between p-6 bg-bg-secondary rounded-[18px] transition-colors duration-300 group hover:bg-[#E8E8ED]">
+            <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="flex flex-col items-start justify-between p-6 bg-bg-secondary rounded-[18px] transition-colors duration-300 group hover:bg-border/50">
               <FaLinkedin size={24} className="text-text-secondary group-hover:text-text-primary mb-6 transition-colors" />
               <div className="flex w-full items-center justify-between">
                 <span className="font-semibold text-[15px] text-text-primary">LinkedIn</span>

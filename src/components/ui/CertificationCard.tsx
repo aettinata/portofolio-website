@@ -16,7 +16,7 @@ export function CertificationCard({ cert }: CertificationCardProps) {
   return (
     <div className="group flex flex-col justify-between bg-bg-secondary p-6 rounded-[18px] transition-all duration-300 hover:shadow-[0_4px_24px_rgba(0,0,0,0.06)] h-full">
       <div>
-        <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-[0_2px_8px_rgba(0,0,0,0.04)] text-text-secondary group-hover:text-accent transition-colors duration-300">
+        <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-full bg-bg-primary shadow-[0_2px_8px_rgba(0,0,0,0.04)] text-text-secondary group-hover:text-accent transition-colors duration-300">
           <span className="text-[20px] font-semibold">{cert.issuer.charAt(0)}</span>
         </div>
         

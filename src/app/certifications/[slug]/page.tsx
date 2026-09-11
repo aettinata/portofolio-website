@@ -18,51 +18,51 @@ export default function CertificationDetail({ params }: { params: { slug: string
   }
 
   return (
-    <div className="flex-1 py-12 md:py-20">
-      <div className="container mx-auto px-6 sm:px-12 lg:px-20 max-w-3xl">
+    <div className="flex-1 py-12 md:py-24 bg-bg-primary">
+      <div className="container mx-auto px-6 sm:px-12 max-w-[1024px]">
           <FadeIn>
             <Link
               href="/certifications"
-              className="inline-flex items-center gap-2 text-sm font-heading font-bold uppercase tracking-widest text-brand-dim hover:text-brand-light transition-colors duration-300 mb-8"
+              className="inline-flex items-center gap-2 text-[14px] font-medium text-text-secondary hover:text-text-primary transition-colors duration-200 mb-12"
             >
               <ArrowLeft size={16} /> Kembali ke Sertifikasi
             </Link>
           </FadeIn>
 
-          <div className="border border-brand-border p-8 md:p-12 overflow-hidden">
+          <div className="bg-bg-secondary rounded-[18px] p-8 md:p-12 overflow-hidden">
             <div className="flex flex-col md:flex-row gap-8 items-start">
               <FadeIn delay={0.1} className="w-full md:w-1/3 flex justify-center">
-                <div className="w-32 h-32 md:w-40 md:h-40 border border-brand-border flex items-center justify-center text-brand-light text-5xl font-heading font-bold">
+                <div className="w-32 h-32 md:w-40 md:h-40 rounded-full bg-bg-primary shadow-[0_2px_8px_rgba(0,0,0,0.04)] flex items-center justify-center text-text-secondary text-5xl font-semibold">
                   {cert.issuer.charAt(0)}
                 </div>
               </FadeIn>
               
               <div className="w-full md:w-2/3 space-y-6">
                 <FadeIn delay={0.2}>
-                  <h1 className="text-2xl md:text-3xl font-heading font-bold uppercase tracking-widest text-brand-light">
+                  <h1 className="text-page-title text-text-primary">
                     {cert.name}
                   </h1>
-                  <p className="text-lg text-brand-gray mt-2">{cert.issuer}</p>
+                  <p className="text-body text-text-secondary mt-2">{cert.issuer}</p>
                 </FadeIn>
 
-                <FadeIn delay={0.3} className="space-y-4 pt-6 border-t border-brand-border">
+                <FadeIn delay={0.3} className="space-y-4 pt-6 border-t border-border">
                   <div className="grid grid-cols-2 gap-4">
                     <div>
-                      <span className="block text-xs font-heading uppercase tracking-widest text-brand-dim">Diterbitkan</span>
-                      <span className="font-medium text-brand-light">{cert.issueDate}</span>
+                      <span className="block text-[12px] font-medium tracking-wide text-text-secondary uppercase mb-1">Diterbitkan</span>
+                      <span className="text-[15px] font-medium text-text-primary">{cert.issueDate}</span>
                     </div>
                     {cert.expiryDate && (
                       <div>
-                        <span className="block text-xs font-heading uppercase tracking-widest text-brand-dim">Berlaku Hingga</span>
-                        <span className="font-medium text-brand-light">{cert.expiryDate}</span>
+                        <span className="block text-[12px] font-medium tracking-wide text-text-secondary uppercase mb-1">Berlaku Hingga</span>
+                        <span className="text-[15px] font-medium text-text-primary">{cert.expiryDate}</span>
                       </div>
                     )}
                   </div>
                   
                   {cert.credentialId && (
                     <div>
-                      <span className="block text-xs font-heading uppercase tracking-widest text-brand-dim">ID Kredensial</span>
-                      <span className="font-medium text-brand-light font-mono text-sm">{cert.credentialId}</span>
+                      <span className="block text-[12px] font-medium tracking-wide text-text-secondary uppercase mb-1">ID Kredensial</span>
+                      <span className="text-[15px] font-medium text-text-primary font-mono">{cert.credentialId}</span>
                     </div>
                   )}
                 </FadeIn>
@@ -73,9 +73,9 @@ export default function CertificationDetail({ params }: { params: { slug: string
                       href={cert.credentialUrl}
                       target="_blank"
                       rel="noreferrer"
-                      className="inline-flex items-center gap-2 border border-brand-border text-brand-light hover:border-brand-light/40 hover:bg-brand-light/5 px-6 py-3 font-heading font-bold uppercase tracking-widest text-sm transition-all duration-300"
+                      className="inline-flex items-center gap-2 text-[14px] font-medium text-accent hover:opacity-80 transition-opacity duration-200"
                     >
-                      Tampilkan Kredensial <ExternalLink size={16} />
+                      Lihat Kredensial <ExternalLink size={14} />
                     </a>
                   </FadeIn>
                 )}

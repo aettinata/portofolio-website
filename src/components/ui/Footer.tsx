@@ -23,7 +23,7 @@ export function Footer() {
               href="https://github.com"
               target="_blank"
               rel="noreferrer"
-              className="flex items-center justify-center w-10 h-10 rounded-full bg-white text-text-secondary hover:text-text-primary shadow-[0_2px_8px_rgba(0,0,0,0.04)] transition-all duration-300"
+              className="flex items-center justify-center w-10 h-10 rounded-full bg-bg-primary text-text-secondary hover:text-text-primary shadow-[0_2px_8px_rgba(0,0,0,0.04)] transition-all duration-300"
               aria-label="GitHub"
             >
               <FaGithub size={18} />
@@ -32,7 +32,7 @@ export function Footer() {
               href="https://linkedin.com"
               target="_blank"
               rel="noreferrer"
-              className="flex items-center justify-center w-10 h-10 rounded-full bg-white text-text-secondary hover:text-text-primary shadow-[0_2px_8px_rgba(0,0,0,0.04)] transition-all duration-300"
+              className="flex items-center justify-center w-10 h-10 rounded-full bg-bg-primary text-text-secondary hover:text-text-primary shadow-[0_2px_8px_rgba(0,0,0,0.04)] transition-all duration-300"
               aria-label="LinkedIn"
             >
               <FaLinkedin size={18} />
@@ -41,7 +41,7 @@ export function Footer() {
               href="https://twitter.com"
               target="_blank"
               rel="noreferrer"
-              className="flex items-center justify-center w-10 h-10 rounded-full bg-white text-text-secondary hover:text-text-primary shadow-[0_2px_8px_rgba(0,0,0,0.04)] transition-all duration-300"
+              className="flex items-center justify-center w-10 h-10 rounded-full bg-bg-primary text-text-secondary hover:text-text-primary shadow-[0_2px_8px_rgba(0,0,0,0.04)] transition-all duration-300"
               aria-label="Twitter"
             >
               <FaTwitter size={18} />

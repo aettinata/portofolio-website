@@ -77,7 +77,7 @@ function TimelineItem({ item, index, isLeft }: { item: ExperienceItem, index: nu
       className={`relative flex flex-col md:flex-row items-start md:items-center w-full my-8 ${isLeft ? "md:justify-start" : "md:justify-end"}`}
     >
       {/* Node indicator */}
-      <div className="absolute left-4 md:left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-white border-[3px] border-border z-10 transition-colors duration-300 hover:border-accent" />
+      <div className="absolute left-4 md:left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-bg-primary border-[3px] border-border z-10 transition-colors duration-300 hover:border-accent" />
       
       {/* Content Card */}
       <div className={`ml-12 md:ml-0 w-full md:w-[45%] p-6 md:p-8 bg-bg-secondary rounded-[18px] transition-all duration-300 hover:shadow-[0_4px_24px_rgba(0,0,0,0.06)] group ${isLeft ? "md:mr-auto" : "md:ml-auto"}`}>
