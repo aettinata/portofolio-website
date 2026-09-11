@@ -12,8 +12,22 @@ const inter = Inter({
 
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://adamaettinata.vercel.app"),
   title: "Faisal Adama — Developer Portfolio",
   description: "Website portofolio pribadi Faisal Adama. Membangun solusi digital yang elegan dan berdampak.",
+  openGraph: {
+    title: "Faisal Adama — Developer Portfolio",
+    description: "Website portofolio pribadi Faisal Adama. Membangun solusi digital yang elegan dan berdampak.",
+    url: "https://adamaettinata.vercel.app",
+    siteName: "Faisal Adama Portfolio",
+    locale: "id_ID",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Faisal Adama — Developer Portfolio",
+    description: "Website portofolio pribadi Faisal Adama. Membangun solusi digital yang elegan dan berdampak.",
+  },
 };
 
 export default function RootLayout({
