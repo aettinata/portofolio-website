@@ -53,3 +53,21 @@ GEMINI.md
 
 DESIGN.md
 PRD-Portofolio.md
+
+# CodeGraph
+.codegraph/
+
+# OS / Temp artifacts
+*.tmp
+*.log
+
+# Python
+__pycache__/
+*.pyc
+
+# Editor
+.vscode/
+.idea/
+
+# Accidental env-var artifacts
+**/$LOCALAPPDATA/
