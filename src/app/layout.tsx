@@ -39,8 +39,14 @@ export default function RootLayout({
     <html lang="id" className={`${inter.variable} scroll-smooth`} suppressHydrationWarning>
       <body className="antialiased min-h-screen flex flex-col relative bg-bg-primary text-text-primary transition-colors duration-300">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+          <a
+            href="#main-content"
+            className="absolute -top-20 left-4 z-50 focus:top-4 focus:bg-bg-primary focus:text-text-primary focus:px-4 focus:py-2 focus:rounded-lg focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-accent transition-all duration-200"
+          >
+            Lewati ke konten
+          </a>
           <Header />
-          <main className="flex-1 flex flex-col relative overflow-hidden">
+          <main id="main-content" className="flex-1 flex flex-col relative overflow-hidden">
             {children}
           </main>
           <Footer />

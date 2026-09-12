@@ -22,6 +22,7 @@ export default function CertificationsPage() {
             </div>
           </FadeIn>
 
+          <h2 className="sr-only">Daftar Sertifikasi</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {certsData.map((cert, index) => (
               <FadeIn key={cert.id} delay={0.1 + index * 0.1}>

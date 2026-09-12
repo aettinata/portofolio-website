@@ -59,7 +59,7 @@ export function ProjectCard({ project, className = "" }: ProjectCardProps) {
                   target="_blank"
                   rel="noreferrer"
                   className="text-text-secondary hover:text-accent transition-colors duration-200 relative z-20"
-                  aria-label="GitHub Repository"
+                  aria-label={`Repositori GitHub ${project.title}`}
                   onClick={(e) => e.stopPropagation()}
                 >
                   <FaGithub size={20} />
@@ -71,7 +71,7 @@ export function ProjectCard({ project, className = "" }: ProjectCardProps) {
                   target="_blank"
                   rel="noreferrer"
                   className="text-text-secondary hover:text-accent transition-colors duration-200 relative z-20"
-                  aria-label="Live Demo"
+                  aria-label={`Demo Live ${project.title}`}
                   onClick={(e) => e.stopPropagation()}
                 >
                   <ExternalLink size={20} />

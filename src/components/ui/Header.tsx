@@ -84,7 +84,7 @@ export function Header() {
             <div className="flex items-center gap-2">
               <ThemeToggle />
               <a href="/resume.pdf" target="_blank" rel="noreferrer" className="hidden sm:inline-flex">
-                <Button variant="primary" className="h-8 px-4 py-0 text-[12px] gap-2 ml-2">
+                <Button variant="primary" className="min-h-[44px] px-4 py-0 text-[12px] gap-2 ml-2">
                   <Download size={14} /> Resume
                 </Button>
               </a>
@@ -92,7 +92,7 @@ export function Header() {
               {/* Mobile hamburger */}
               <button
                 onClick={() => setMobileOpen(!mobileOpen)}
-                className="md:hidden flex items-center justify-center w-8 h-8 rounded-full text-text-secondary hover:bg-bg-secondary hover:text-text-primary transition-colors duration-200 ml-1"
+                className="md:hidden flex items-center justify-center w-[44px] h-[44px] rounded-full text-text-secondary hover:bg-bg-secondary hover:text-text-primary transition-colors duration-200 ml-1"
                 aria-label={mobileOpen ? "Tutup menu" : "Buka menu"}
                 aria-expanded={mobileOpen}
               >

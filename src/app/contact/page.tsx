@@ -6,9 +6,11 @@ import { Magnetic } from "@/components/animations/Magnetic";
 import { Copy, Mail, MapPin, ArrowUpRight, Check } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { Button } from "@/components/ui/Button";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 
 export default function ContactPage() {
+  const shouldReduceMotion = useReducedMotion();
+
   const [showToast, setShowToast] = useState(false);
 
   const handleCopyEmail = () => {
@@ -24,9 +26,9 @@ export default function ContactPage() {
       <AnimatePresence>
         {showToast && (
           <motion.div
-            initial={{ opacity: 0, y: -20 }}
+            initial={{ opacity: 0, y: shouldReduceMotion ? 0 : -20 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
+            exit={{ opacity: 0, y: shouldReduceMotion ? 0 : -20 }}
             transition={{ type: "spring", stiffness: 400, damping: 25 }}
             className="fixed top-20 left-1/2 -translate-x-1/2 z-50 flex items-center gap-2 bg-bg-secondary border border-border px-4 py-2 rounded-2xl shadow-[0_4px_24px_rgba(0,0,0,0.12)] text-[13px] font-medium text-text-primary"
             role="alert"

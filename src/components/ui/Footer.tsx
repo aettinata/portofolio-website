@@ -23,7 +23,7 @@ export function Footer() {
               href="https://github.com"
               target="_blank"
               rel="noreferrer"
-              className="flex items-center justify-center w-10 h-10 rounded-full bg-bg-primary text-text-secondary hover:text-text-primary shadow-[0_2px_8px_rgba(0,0,0,0.04)] transition-all duration-300"
+              className="flex items-center justify-center w-[44px] h-[44px] rounded-full bg-bg-primary text-text-secondary hover:text-text-primary shadow-[0_2px_8px_rgba(0,0,0,0.04)] transition-all duration-300"
               aria-label="GitHub"
             >
               <FaGithub size={18} />
@@ -32,7 +32,7 @@ export function Footer() {
               href="https://linkedin.com"
               target="_blank"
               rel="noreferrer"
-              className="flex items-center justify-center w-10 h-10 rounded-full bg-bg-primary text-text-secondary hover:text-text-primary shadow-[0_2px_8px_rgba(0,0,0,0.04)] transition-all duration-300"
+              className="flex items-center justify-center w-[44px] h-[44px] rounded-full bg-bg-primary text-text-secondary hover:text-text-primary shadow-[0_2px_8px_rgba(0,0,0,0.04)] transition-all duration-300"
               aria-label="LinkedIn"
             >
               <FaLinkedin size={18} />
@@ -41,7 +41,7 @@ export function Footer() {
               href="https://twitter.com"
               target="_blank"
               rel="noreferrer"
-              className="flex items-center justify-center w-10 h-10 rounded-full bg-bg-primary text-text-secondary hover:text-text-primary shadow-[0_2px_8px_rgba(0,0,0,0.04)] transition-all duration-300"
+              className="flex items-center justify-center w-[44px] h-[44px] rounded-full bg-bg-primary text-text-secondary hover:text-text-primary shadow-[0_2px_8px_rgba(0,0,0,0.04)] transition-all duration-300"
               aria-label="Twitter"
             >
               <FaTwitter size={18} />
@@ -55,16 +55,16 @@ export function Footer() {
           </div>
 
           <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-[12px] text-text-secondary">
-            <Link href="/about" className="hover:text-text-primary transition-colors">
+            <Link href="/about" className="hover:text-text-primary transition-colors py-2 px-1 inline-block">
               Tentang
             </Link>
-            <Link href="/projects" className="hover:text-text-primary transition-colors">
+            <Link href="/projects" className="hover:text-text-primary transition-colors py-2 px-1 inline-block">
               Portofolio
             </Link>
-            <Link href="/certifications" className="hover:text-text-primary transition-colors">
+            <Link href="/certifications" className="hover:text-text-primary transition-colors py-2 px-1 inline-block">
               Sertifikasi
             </Link>
-            <Link href="/contact" className="hover:text-text-primary transition-colors">
+            <Link href="/contact" className="hover:text-text-primary transition-colors py-2 px-1 inline-block">
               Kontak
             </Link>
           </div>

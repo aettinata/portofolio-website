@@ -14,7 +14,7 @@ export function ThemeToggle() {
   }, []);
 
   if (!mounted) {
-    return <div className="w-8 h-8" />; // Placeholder to avoid layout shift
+    return <div className="w-[44px] h-[44px]" />; // Placeholder to avoid layout shift
   }
 
   const isDark = theme === "dark" || (theme === "system" && window.matchMedia("(prefers-color-scheme: dark)").matches);
@@ -22,7 +22,7 @@ export function ThemeToggle() {
   return (
     <button
       onClick={() => setTheme(isDark ? "light" : "dark")}
-      className="flex items-center justify-center w-8 h-8 rounded-full text-text-secondary hover:bg-bg-secondary hover:text-text-primary transition-colors duration-200"
+      className="flex items-center justify-center w-[44px] h-[44px] rounded-full text-text-secondary hover:bg-bg-secondary hover:text-text-primary transition-colors duration-200"
       aria-label="Toggle Theme"
     >
       {isDark ? <Moon size={16} /> : <Sun size={16} />}

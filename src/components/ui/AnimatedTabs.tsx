@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, KeyboardEvent } from "react";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 
 interface AnimatedTabsProps {
   tabs: string[];
@@ -11,6 +11,7 @@ interface AnimatedTabsProps {
 
 export function AnimatedTabs({ tabs, activeTab, onChange }: AnimatedTabsProps) {
   const tabRefs = useRef<(HTMLButtonElement | null)[]>([]);
+  const shouldReduceMotion = useReducedMotion();
 
   const handleKeyDown = (e: KeyboardEvent, index: number) => {
     let nextIndex: number | null = null;
@@ -58,7 +59,7 @@ export function AnimatedTabs({ tabs, activeTab, onChange }: AnimatedTabsProps) {
               <motion.div
                 layoutId="active-tab"
                 className="absolute inset-0 bg-accent rounded-full -z-10 shadow-[0_2px_8px_rgba(0,113,227,0.3)]"
-                transition={{ type: "spring", stiffness: 400, damping: 30 }}
+                transition={shouldReduceMotion ? { duration: 0 } : { type: "spring", stiffness: 400, damping: 30 }}
               />
             )}
             {tab}

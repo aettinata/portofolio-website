@@ -28,6 +28,7 @@ export default function ProjectsPage() {
         />
       </FadeIn>
 
+      <h2 className="sr-only">Daftar Proyek</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
         {filteredProjects.map((project, index) => (
           <FadeIn key={project.id} delay={0.1 + (index * 0.1)}>
