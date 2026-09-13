@@ -5,6 +5,7 @@ import { GitHubActivity } from "@/components/sections/GitHubActivity";
 import { NowSection } from "@/components/sections/NowSection";
 import { SectionDivider } from "@/components/ui/SectionDivider";
 import profileData from "@/data/profile.json";
+import Image from "next/image";
 
 export default function AboutPage() {
   const experienceData = [
@@ -25,13 +26,27 @@ export default function AboutPage() {
   return (
     <div className="container mx-auto max-w-[1024px] px-6 sm:px-12 py-12 md:py-24 bg-bg-primary">
       <FadeIn>
-        <div className="max-w-3xl mb-16 md:mb-24">
-          <h1 className="text-page-title text-text-primary mb-6">
-            Tentang Saya
-          </h1>
-          <p className="text-body text-text-secondary leading-relaxed">
-            {profileData.bio} Saya berfokus pada perpaduan antara desain antarmuka yang estetis dan performa sistem yang optimal.
-          </p>
+        <div className="flex flex-col-reverse md:flex-row md:items-center justify-between gap-8 md:gap-12 mb-16 md:mb-24 max-w-4xl">
+          <div className="max-w-2xl">
+            <h1 className="text-page-title text-text-primary mb-6">
+              Tentang Saya
+            </h1>
+            <p className="text-body text-text-secondary leading-relaxed text-base sm:text-lg">
+              {profileData.bio} Saya berfokus pada perpaduan antara desain antarmuka yang estetis dan performa sistem yang optimal.
+            </p>
+          </div>
+          <div className="shrink-0">
+            <div className="relative w-24 h-24 sm:w-28 sm:h-28 md:w-36 md:h-36 lg:w-40 lg:h-40 rounded-full overflow-hidden border border-border bg-bg-secondary shadow-xs">
+              <Image
+                src="/images/profile.jpg"
+                alt={profileData.name}
+                fill
+                priority
+                sizes="(max-width: 768px) 112px, 160px"
+                className="object-cover grayscale contrast-[1.05]"
+              />
+            </div>
+          </div>
         </div>
       </FadeIn>
 

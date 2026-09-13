@@ -53,7 +53,7 @@ export default function ContactPage() {
               <Magnetic intensity={0.15} className="w-full">
                 <a href="mailto:hello@example.com" className="w-full inline-block">
                   <Button variant="primary" className="w-full flex items-center justify-center gap-3">
-                    <Mail size={18} /> hello@example.com
+                    <Mail size={18} /> aettinata@gmail.com
                   </Button>
                 </a>
               </Magnetic>

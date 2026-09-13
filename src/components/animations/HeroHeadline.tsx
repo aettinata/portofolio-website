@@ -58,7 +58,7 @@ export function HeroHeadline({ className = "" }: HeroHeadlineProps) {
           >
             {item.text}
           </motion.span>
-          {item.breakAfterMd && <br className="hidden md:block" />}
+          {item.breakAfterMd && <br className="hidden lg:block" />}
         </Fragment>
       ))}
     </motion.h1>
