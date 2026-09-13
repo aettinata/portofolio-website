@@ -1,65 +1,24 @@
 [
   {
     "id": "project-1",
-    "slug": "portfolio",
-    "title": "Website Portofolio",
-    "description": "Website portofolio pribadi modern menggunakan Next.js dan Tailwind CSS.",
-    "fullDescription": "Proyek ini adalah iterasi pertama dari portofolio pribadi saya. Fokus utama adalah performa, desain yang responsif, dan efek visual yang menarik menggunakan Framer Motion.",
-    "challenges": "Mengimplementasikan dark mode secara efisien tanpa efek berkedip saat pertama kali muat (FOUC) dan membuat animasi scroll yang halus.",
-    "solutions": "Menggunakan 'next-themes' untuk manajemen tema yang mulus dan memanfaatkan komponen wrapper khusus untuk integrasi Framer Motion yang mudah.",
+    "slug": "portfolio-website",
+    "title": "Portofolio Website",
+    "description": "Website portofolio pribadi modern dengan Next.js 16, TypeScript, dan Tailwind CSS v4.",
+    "fullDescription": "Portofolio pribadi yang dibangun dari nol sebagai showcase kemampuan full-stack dan UI/UX. Dilengkapi dark mode, page transitions halus, aksesibilitas lengkap (skip-link, focus states, keyboard navigation), dan Lighthouse Accessibility 90+. Dibangun dengan pendekatan AI-assisted development menggunakan Hermes Agent sebagai workflow utama.",
+    "challenges": "Menjaga konsistensi design system (Apple-inspired monochrome) di seluruh halaman, mengatasi bug hydration pada reduced-motion, serta mengimplementasikan page transitions yang snappy tanpa mengorbankan performa di production.",
+    "solutions": "Menggunakan template.tsx dengan Framer Motion untuk entry-only animation (menghindari lag di Vercel), menerapkan design token terpusat via globals.css, dan memisahkan logic client/server component secara tepat untuk zero hydration mismatch.",
     "technologies": [
       "Next.js",
       "TypeScript",
       "Tailwind CSS",
-      "Framer Motion"
+      "Framer Motion",
+      "Vercel"
     ],
     "image": "/images/projects/project1.jpg",
     "demoUrl": "https://adamaettinata.vercel.app",
-    "githubUrl": "https://github.com/aettinata/portofolio-website.git",
+    "githubUrl": "https://github.com/aettinata/portofolio-website",
     "category": "Web",
     "date": "2026-09",
-    "featured": true
-  },
-  {
-    "id": "project-2",
-    "slug": "ecommerce-dashboard",
-    "title": "E-Commerce Dashboard",
-    "description": "Dashboard admin untuk mengelola inventaris dan pesanan toko online.",
-    "fullDescription": "Dashboard lengkap dengan visualisasi data, manajemen pengguna, dan integrasi API RESTful.",
-    "challenges": "Mengelola state yang kompleks untuk filter dan pagination data yang besar.",
-    "solutions": "Menggunakan React Query untuk manajemen state data dari server dan optimasi rendering dengan memoization.",
-    "technologies": [
-      "React",
-      "TypeScript",
-      "Tailwind CSS",
-      "Recharts"
-    ],
-    "image": "/images/projects/project2.jpg",
-    "demoUrl": "https://demo-dashboard.vercel.app",
-    "githubUrl": "https://github.com/username/dashboard",
-    "category": "Web",
-    "date": "2026-05",
-    "featured": true
-  },
-  {
-    "id": "project-3",
-    "slug": "task-management-app",
-    "title": "Task Management App",
-    "description": "Aplikasi produktivitas berbasis Kanban untuk pelacakan tugas tim dan alur kerja kolaboratif.",
-    "fullDescription": "Platform manajemen proyek modern dengan papan Kanban interaktif, dukungan drag-and-drop, filter prioritas, dan visualisasi status alur kerja secara real-time.",
-    "challenges": "Menjaga responsivitas interaksi drag-and-drop serta sinkronisasi state aplikasi tanpa re-render berlebihan.",
-    "solutions": "Menggunakan Zustand untuk manajemen state terpusat yang ringan dan memisahkan rendering kartu menggunakan memoization.",
-    "technologies": [
-      "Next.js",
-      "TypeScript",
-      "Tailwind CSS",
-      "Zustand"
-    ],
-    "image": "/images/projects/project3.jpg",
-    "demoUrl": "https://demo-taskapp.vercel.app",
-    "githubUrl": "https://github.com/username/task-app",
-    "category": "Web",
-    "date": "2026-07",
     "featured": true
   }
 ]
