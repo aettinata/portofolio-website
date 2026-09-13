@@ -1,16 +1,21 @@
 [
   {
     "id": "project-1",
-    "slug": "portfolio-v1",
-    "title": "Website Portofolio V1",
+    "slug": "portfolio",
+    "title": "Website Portofolio",
     "description": "Website portofolio pribadi modern menggunakan Next.js dan Tailwind CSS.",
     "fullDescription": "Proyek ini adalah iterasi pertama dari portofolio pribadi saya. Fokus utama adalah performa, desain yang responsif, dan efek visual yang menarik menggunakan Framer Motion.",
     "challenges": "Mengimplementasikan dark mode secara efisien tanpa efek berkedip saat pertama kali muat (FOUC) dan membuat animasi scroll yang halus.",
     "solutions": "Menggunakan 'next-themes' untuk manajemen tema yang mulus dan memanfaatkan komponen wrapper khusus untuk integrasi Framer Motion yang mudah.",
-    "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+    "technologies": [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Framer Motion"
+    ],
     "image": "/images/projects/project1.jpg",
-    "demoUrl": "https://demo-portofolio.vercel.app",
-    "githubUrl": "https://github.com/username/portfolio",
+    "demoUrl": "https://adamaettinata.vercel.app",
+    "githubUrl": "https://github.com/aettinata/portofolio-website.git",
     "category": "Web",
     "date": "2026-09",
     "featured": true
@@ -23,7 +28,12 @@
     "fullDescription": "Dashboard lengkap dengan visualisasi data, manajemen pengguna, dan integrasi API RESTful.",
     "challenges": "Mengelola state yang kompleks untuk filter dan pagination data yang besar.",
     "solutions": "Menggunakan React Query untuk manajemen state data dari server dan optimasi rendering dengan memoization.",
-    "technologies": ["React", "TypeScript", "Tailwind CSS", "Recharts"],
+    "technologies": [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Recharts"
+    ],
     "image": "/images/projects/project2.jpg",
     "demoUrl": "https://demo-dashboard.vercel.app",
     "githubUrl": "https://github.com/username/dashboard",
@@ -39,7 +49,12 @@
     "fullDescription": "Platform manajemen proyek modern dengan papan Kanban interaktif, dukungan drag-and-drop, filter prioritas, dan visualisasi status alur kerja secara real-time.",
     "challenges": "Menjaga responsivitas interaksi drag-and-drop serta sinkronisasi state aplikasi tanpa re-render berlebihan.",
     "solutions": "Menggunakan Zustand untuk manajemen state terpusat yang ringan dan memisahkan rendering kartu menggunakan memoization.",
-    "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "Zustand"],
+    "technologies": [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Zustand"
+    ],
     "image": "/images/projects/project3.jpg",
     "demoUrl": "https://demo-taskapp.vercel.app",
     "githubUrl": "https://github.com/username/task-app",
