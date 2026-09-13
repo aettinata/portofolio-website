@@ -1,6 +1,7 @@
 import { FadeIn } from "@/components/animations/FadeIn";
 import { ExperienceTimeline } from "@/components/sections/ExperienceTimeline";
 import { BentoGrid } from "@/components/sections/BentoGrid";
+import { GitHubActivity } from "@/components/sections/GitHubActivity";
 import { NowSection } from "@/components/sections/NowSection";
 import { SectionDivider } from "@/components/ui/SectionDivider";
 import profileData from "@/data/profile.json";
@@ -39,6 +40,10 @@ export default function AboutPage() {
       <SectionDivider className="mb-16 md:mb-20" />
 
       <BentoGrid className="mb-16 md:mb-20" />
+
+      <SectionDivider className="mb-16 md:mb-20" />
+
+      <GitHubActivity className="mb-16 md:mb-20" />
 
       <SectionDivider className="mb-16 md:mb-20" />
 
