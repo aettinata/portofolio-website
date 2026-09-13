@@ -1,75 +1,77 @@
 # 🌐 Personal Portfolio — Faisal Adama
 
-> Sebuah website portofolio modern yang dibangun dengan Next.js 14, TypeScript, dan Tailwind CSS. Menampilkan identitas diri, proyek-proyek, sertifikasi, dan cara untuk terhubung.
+> A modern, accessible, and high-performance portfolio website built with **Next.js 16**, **React 19**, **TypeScript**, and **Tailwind CSS v4**. Showcasing identity, projects, certifications, and ways to connect.
 
 🔗 **Live Demo:** [https://portfolio-faisal.vercel.app](https://portfolio-faisal.vercel.app)  
-📌 **Status:** Aktif — Terakhir diperbarui: September 2026
+📌 **Status:** Active — Last updated: September 2026
 
 ---
 
-## ✨ Fitur Utama
+## ✨ Key Features
 
-- ⚡ **Performa tinggi** — Next.js 14 dengan App Router, Image Optimization, dan code splitting
-- 🎨 **Desain futuristik monochrome** — Gaya visual berani dengan aksen neon cyan dan efek grain/noise
-- 🌗 **Dark mode** — Toggle tema terang/gelap menggunakan `next-themes`
-- 📱 **Responsif** — Tampilan optimal di desktop, tablet, dan mobile
-- 🧩 **Data terstruktur** — Konten dikelola melalui file JSON di `src/data/`
-- 🔍 **SEO Friendly** — Metadata lengkap dan Open Graph tags
-- 🖱️ **Animasi halus** — Menggunakan Framer Motion untuk efek scroll dan hover
+- ⚡ **High Performance** — Powered by Next.js 16 with App Router, SSR, Image Optimization, and code splitting.
+- 🎨 **Futuristic Monochrome Design** — Bold visual aesthetic with neon cyan accents, grain/noise effects, and Apple-inspired minimalism.
+- 🌗 **Dark Mode** — Seamless light/dark theme toggling using `next-themes`.
+- ♿ **Strict Accessibility (WCAG AA)** — Features off-screen positioned skip-links, robust focus states, and 44px minimum touch targets.
+- 🖱️ **Optimized Animations** — Refined entry page transitions mapped through `template.tsx` (preventing content stacking bugs) via **Framer Motion**, including strict support for `useReducedMotion`.
+- 🧩 **Structured Data** — Content managed seamlessly via JSON files in `src/data/`.
+- 🔍 **SEO Friendly** — Comprehensive metadata configuration and Open Graph tags.
 
 ---
 
-## 📂 Struktur Proyek
+## 📂 Project Structure
 
 ```bash
 portfolio-website/
 ├── public/
-│   └── images/              # Gambar profil, proyek, dan sertifikasi
+│   └── images/              # Profile, project, and certification assets
 ├── src/
 │   ├── app/
-│   │   ├── (routes)/        # Halaman: /, /about, /projects, /certifications, /contact
-│   │   ├── layout.tsx       # Layout utama dengan ThemeProvider
-│   │   └── globals.css      # Gaya global dengan variabel CSS
+│   │   ├── (routes)/        # Routes: /, /about, /projects, /certifications, /contact
+│   │   ├── layout.tsx       # Root layout with ThemeProvider
+│   │   ├── template.tsx     # Page transition wrapper (entry animations only)
+│   │   └── globals.css      # Global styles with Tailwind v4 native patterns (@theme)
 │   ├── components/
-│   │   ├── ui/              # Komponen reusable: Header, Footer, Button, Card
-│   │   ├── sections/        # Komponen per halaman: Hero, ProjectGrid, dll.
-│   │   └── animations/      # Komponen animasi FadeIn
+│   │   ├── ui/              # Reusable UI components: Header, Footer, Button, Card
+│   │   ├── sections/        # Section components: Hero, ProjectGrid, etc.
+│   │   └── animations/      # Animation wrappers
 │   ├── data/
-│   │   ├── profile.json     # Data diri, bio, skills
-│   │   ├── projects.json    # Daftar proyek
-│   │   └── certifications.json # Daftar sertifikasi
+│   │   ├── profile.json     # Personal info, bio, skills
+│   │   ├── projects.json    # Project list
+│   │   └── certifications.json # Certification list
 │   └── lib/
-│       └── utils.ts         # Fungsi bantu
-├── .env.local               # Environment variables (jangan commit!)
-├── next.config.ts
-├── tailwind.config.ts
+│       └── utils.ts         # Utility functions
+├── .env.local               # Environment variables (do not commit!)
+├── eslint.config.mjs
+├── postcss.config.mjs
 ├── tsconfig.json
 └── package.json
 ```
 
 ---
 
-## 🛠️ Teknologi yang Digunakan
+## 🛠️ Technology Stack
 
-| Teknologi | Kegunaan |
-|-----------|----------|
-| **Next.js 14** | Framework React dengan App Router, SSR, dan static generation |
-| **TypeScript** | Type safety dan dokumentasi kode |
-| **Tailwind CSS** | Utility-first styling yang cepat dan responsif |
-| **Framer Motion** | Animasi halus untuk pengalaman pengguna yang lebih baik |
-| **Next Themes** | Dukungan dark mode dengan persistensi lokal |
-| **Lucide React** | Ikon-ikon modern dan ringan |
-| **Vercel** | Hosting dan deployment otomatis dari GitHub |
+| Technology | Purpose |
+|------------|---------|
+| **Next.js 16** | React Framework with App Router, SSR, and optimized asset delivery |
+| **React 19** | Latest UI library for rendering robust interfaces |
+| **TypeScript** | Static typing and comprehensive code documentation |
+| **Tailwind CSS v4** | Next-generation utility-first styling with native CSS property support |
+| **Framer Motion** | Smooth animations and entry page transitions |
+| **Next Themes** | Local persistence for dark mode |
+| **Lucide React** | Modern, lightweight iconography |
+| **Vercel** | Automated CI/CD hosting from GitHub |
 
 ---
 
-## 🚀 Cara Menjalankan di Lokal
+## 🚀 Local Development
 
-### Prasyarat
-- Node.js 18.x atau lebih baru
-- npm, yarn, atau pnpm
+### Prerequisites
+- Node.js 20.x or newer
+- npm, yarn, or pnpm
 
-### Langkah-langkah
+### Steps
 
 1. **Clone repository**
    ```bash
@@ -80,18 +82,16 @@ portfolio-website/
 2. **Install dependencies**
    ```bash
    npm install
-   # atau
-   yarn install
    ```
 
-3. **Jalankan development server**
+3. **Run development server**
    ```bash
    npm run dev
    ```
 
-4. **Buka browser** di `http://localhost:3000`
+4. **Open your browser** at `http://localhost:3000`
 
-### Build untuk Produksi
+### Production Build
 ```bash
 npm run build
 npm start
@@ -101,18 +101,18 @@ npm start
 
 ## 📦 Deployment
 
-Proyek ini di-deploy menggunakan **Vercel**. Setiap kali ada push ke branch `main`, Vercel akan otomatis melakukan build dan deploy.
+This project is deployed using **Vercel**. Any pushes to the `main` branch will automatically trigger Vercel to build and deploy.
 
-### Langkah manual:
-1. Push kode ke GitHub.
-2. Buka [Vercel](https://vercel.com) dan hubungkan dengan repository ini.
-3. Vercel akan mendeteksi Next.js dan melakukan deploy secara otomatis.
+### Manual Steps:
+1. Push code to your GitHub repository.
+2. Log into [Vercel](https://vercel.com) and link this repository.
+3. Vercel automatically detects Next.js configurations and handles the deployment.
 
 ---
 
-## 🧑‍💻 Tentang Saya
+## 🧑‍💻 About Me
 
-Halo! Saya **Faisal Adama**, fresh graduate IT dengan minat besar dalam pengembangan web modern dan desain antarmuka pengguna. Saya suka membangun solusi digital yang berdampak dan terus belajar teknologi baru.
+Hello! I'm **Faisal Adama**, an IT fresh graduate with a massive passion for modern web development and user interface design. I love building impactful digital solutions and continuously learning new technologies.
 
 - 🌐 [Website](https://portfolio-faisal.vercel.app)
 - 🐙 [GitHub](https://github.com/username)
@@ -121,19 +121,19 @@ Halo! Saya **Faisal Adama**, fresh graduate IT dengan minat besar dalam pengemba
 
 ---
 
-## 📄 Lisensi
+## 📄 License
 
-Proyek ini bersifat open-source di bawah lisensi **MIT**. Silakan gunakan sebagai referensi atau template untuk portofolio pribadimu.
-
----
-
-## 🙏 Ucapan Terima Kasih
-
-- [Next.js](https://nextjs.org) — Framework yang luar biasa.
-- [Vercel](https://vercel.com) — Hosting yang sempurna untuk Next.js.
-- [Tailwind CSS](https://tailwindcss.com) — Styling yang menyenangkan.
-- [Framer Motion](https://www.framer.com/motion/) — Animasi yang mulus.
+This project is open-sourced under the **MIT** License. Feel free to use it as a reference or template for your personal portfolio.
 
 ---
 
-**Dibuat dengan ❤️ oleh Faisal Adama**
+## 🙏 Acknowledgements
+
+- [Next.js](https://nextjs.org) — An incredible framework.
+- [Vercel](https://vercel.com) — Seamless Next.js hosting.
+- [Tailwind CSS](https://tailwindcss.com) — Beautiful styling.
+- [Framer Motion](https://www.framer.com/motion/) — Smooth animations.
+
+---
+
+**Crafted with ❤️ by Faisal Adama**
