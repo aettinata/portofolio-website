@@ -28,7 +28,7 @@ export default function NotFound() {
   };
 
   return (
-    <main className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-background p-6 text-foreground">
+    <div className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-background p-6 text-foreground">
       {/* 1. Subtle Grid Pattern Background */}
       <div className="pointer-events-none absolute inset-0 z-0 flex items-center justify-center opacity-[0.03] dark:opacity-[0.05]">
         <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
@@ -95,6 +95,6 @@ export default function NotFound() {
           </Link>
         </motion.div>
       </motion.div>
-    </main>
+    </div>
   );
 }

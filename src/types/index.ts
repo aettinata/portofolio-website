@@ -20,6 +20,7 @@ export interface BaseProject {
   category: string;
   demoUrl?: string;
   githubUrl?: string;
+  featured?: boolean;
 }
 
 // Extended Project Type

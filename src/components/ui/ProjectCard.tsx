@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { Project } from "@/types";
 import { ExternalLink } from "lucide-react";
@@ -15,8 +17,8 @@ export function ProjectCard({ project, className = "" }: ProjectCardProps) {
     >
       <div className="relative z-10 flex flex-col h-full">
         <Link href={`/projects/${project.slug}`} className="relative h-48 md:h-64 w-full overflow-hidden block bg-bg-secondary">
-          <div className="absolute inset-0 bg-bg-secondary flex items-center justify-center transition-transform duration-500 group-hover:scale-[1.02]">
-            <span className="text-[28px] font-semibold tracking-tight text-border">
+          <div className="absolute inset-0 bg-bg-secondary flex items-center justify-center p-4 text-center transition-transform duration-500 group-hover:scale-[1.02]">
+            <span className="text-[22px] sm:text-[28px] font-semibold tracking-tight text-border line-clamp-2">
               {project.title}
             </span>
           </div>
