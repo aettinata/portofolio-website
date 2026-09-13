@@ -14,3 +14,12 @@ export function formatRelativeTime(dateString: string): string {
   if (diffInMonths < 12) return `${diffInMonths} bulan lalu`;
   return `${Math.floor(diffInMonths / 12)} tahun lalu`;
 }
+
+export function formatMonthYear(dateString: string): string {
+  const [year, month] = dateString.split("-");
+  const date = new Date(parseInt(year, 10), parseInt(month, 10) - 1);
+  return date.toLocaleDateString("id-ID", {
+    year: "numeric",
+    month: "long",
+  });
+}

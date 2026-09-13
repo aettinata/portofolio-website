@@ -24,7 +24,12 @@ export interface BaseProject {
 }
 
 // Extended Project Type
-export interface Project extends BaseProject {}
+export interface Project extends BaseProject {
+  fullDescription?: string;
+  challenges?: string;
+  solutions?: string;
+  date?: string;
+}
 
 // Profile Type
 export interface Profile {
