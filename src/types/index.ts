@@ -25,3 +25,24 @@ export interface BaseProject {
 
 // Extended Project Type
 export interface Project extends BaseProject {}
+
+// Profile Type
+export interface Profile {
+  name: string;
+  title: string;
+  tagline: string;
+  bio: string;
+  education: Array<{
+    degree: string;
+    institution: string;
+    year: string;
+  }>;
+  skills: string[];
+  interests: string[];
+  now?: {
+    learning: string;
+    reading: string;
+    building: string;
+    listening: string;
+  };
+}

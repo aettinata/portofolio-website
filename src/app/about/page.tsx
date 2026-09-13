@@ -1,5 +1,6 @@
 import { FadeIn } from "@/components/animations/FadeIn";
 import { ExperienceTimeline } from "@/components/sections/ExperienceTimeline";
+import { NowSection } from "@/components/sections/NowSection";
 import profileData from "@/data/profile.json";
 
 export default function AboutPage() {
@@ -21,7 +22,7 @@ export default function AboutPage() {
   return (
     <div className="container mx-auto max-w-[1024px] px-6 sm:px-12 py-12 md:py-24 bg-bg-primary">
       <FadeIn>
-        <div className="max-w-3xl mb-24">
+        <div className="max-w-3xl mb-16 md:mb-24">
           <h1 className="text-page-title text-text-primary mb-6">
             Tentang Saya
           </h1>
@@ -30,6 +31,8 @@ export default function AboutPage() {
           </p>
         </div>
       </FadeIn>
+
+      <NowSection className="mb-24 md:mb-32" />
 
       <FadeIn delay={0.1}>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-32">
