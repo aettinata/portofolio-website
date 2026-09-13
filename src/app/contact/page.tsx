@@ -50,14 +50,14 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {/* Email Actions */}
             <div className="flex flex-col gap-6">
-              <Magnetic intensity={0.1}>
+              <Magnetic intensity={0.15} className="w-full">
                 <a href="mailto:hello@example.com" className="w-full inline-block">
                   <Button variant="primary" className="w-full flex items-center justify-center gap-3">
                     <Mail size={18} /> hello@example.com
                   </Button>
                 </a>
               </Magnetic>
-              <Magnetic intensity={0.1}>
+              <Magnetic intensity={0.15} className="w-full">
                 <div className="w-full inline-block">
                   <Button variant="secondary" onClick={handleCopyEmail} className="w-full flex items-center justify-center gap-3">
                     <Copy size={18} /> Salin Alamat Email
@@ -68,20 +68,24 @@ export default function ContactPage() {
 
             {/* Social Links */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <a href="https://github.com" target="_blank" rel="noreferrer" aria-label="Kunjungi profil GitHub" className="flex flex-col items-start justify-between p-6 bg-bg-secondary rounded-2xl transition-colors duration-300 group hover:bg-border/50">
-                <FaGithub size={24} className="text-text-secondary group-hover:text-text-primary mb-6 transition-colors" />
-                <div className="flex w-full items-center justify-between">
-                  <span className="font-semibold text-[15px] text-text-primary">GitHub</span>
-                  <ArrowUpRight size={16} className="text-text-secondary group-hover:text-text-primary transition-colors" />
-                </div>
-              </a>
-              <a href="https://linkedin.com" target="_blank" rel="noreferrer" aria-label="Kunjungi profil LinkedIn" className="flex flex-col items-start justify-between p-6 bg-bg-secondary rounded-2xl transition-colors duration-300 group hover:bg-border/50">
-                <FaLinkedin size={24} className="text-text-secondary group-hover:text-text-primary mb-6 transition-colors" />
-                <div className="flex w-full items-center justify-between">
-                  <span className="font-semibold text-[15px] text-text-primary">LinkedIn</span>
-                  <ArrowUpRight size={16} className="text-text-secondary group-hover:text-text-primary transition-colors" />
-                </div>
-              </a>
+              <Magnetic intensity={0.08} className="w-full h-full">
+                <a href="https://github.com" target="_blank" rel="noreferrer" aria-label="Kunjungi profil GitHub" className="flex flex-col items-start justify-between p-6 bg-bg-secondary rounded-2xl transition-colors duration-300 group hover:bg-border/50 h-full">
+                  <FaGithub size={24} className="text-text-secondary group-hover:text-text-primary mb-6 transition-colors" />
+                  <div className="flex w-full items-center justify-between">
+                    <span className="font-semibold text-[15px] text-text-primary">GitHub</span>
+                    <ArrowUpRight size={16} className="text-text-secondary group-hover:text-text-primary transition-colors" />
+                  </div>
+                </a>
+              </Magnetic>
+              <Magnetic intensity={0.08} className="w-full h-full">
+                <a href="https://linkedin.com" target="_blank" rel="noreferrer" aria-label="Kunjungi profil LinkedIn" className="flex flex-col items-start justify-between p-6 bg-bg-secondary rounded-2xl transition-colors duration-300 group hover:bg-border/50 h-full">
+                  <FaLinkedin size={24} className="text-text-secondary group-hover:text-text-primary mb-6 transition-colors" />
+                  <div className="flex w-full items-center justify-between">
+                    <span className="font-semibold text-[15px] text-text-primary">LinkedIn</span>
+                    <ArrowUpRight size={16} className="text-text-secondary group-hover:text-text-primary transition-colors" />
+                  </div>
+                </a>
+              </Magnetic>
               <div className="sm:col-span-2 flex items-center justify-center gap-3 p-6 bg-bg-secondary rounded-2xl">
                 <MapPin size={18} className="text-text-secondary" />
                 <span className="font-medium text-[15px] text-text-secondary">Semarang, Indonesia</span>

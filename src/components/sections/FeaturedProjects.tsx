@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { FadeIn } from "@/components/animations/FadeIn";
+import { Magnetic } from "@/components/animations/Magnetic";
 import { ProjectCard } from "@/components/ui/ProjectCard";
 import projectsData from "@/data/projects.json";
 import { Project } from "@/types";
@@ -26,12 +27,14 @@ export function FeaturedProjects() {
               Beberapa proyek yang saya banggakan
             </p>
           </div>
-          <Link
-            href="/projects"
-            className="text-accent hover:opacity-80 inline-flex items-center gap-1 font-medium transition-opacity text-[15px]"
-          >
-            Lihat Semua <ArrowRight size={16} aria-hidden="true" />
-          </Link>
+          <Magnetic intensity={0.2}>
+            <Link
+              href="/projects"
+              className="text-accent hover:opacity-80 inline-flex items-center gap-1 font-medium transition-opacity text-[15px]"
+            >
+              Lihat Semua <ArrowRight size={16} aria-hidden="true" />
+            </Link>
+          </Magnetic>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">

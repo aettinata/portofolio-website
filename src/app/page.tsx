@@ -21,14 +21,14 @@ export default function Home() {
             </p>
 
             <div className="flex flex-wrap items-center gap-4">
-              <Magnetic intensity={0.1}>
+              <Magnetic intensity={0.2}>
                 <Link href="/projects">
                   <Button variant="primary">
                     Lihat Karya
                   </Button>
                 </Link>
               </Magnetic>
-              <Magnetic intensity={0.1}>
+              <Magnetic intensity={0.2}>
                 <Link href="/about">
                   <Button variant="secondary">
                     Tentang Saya

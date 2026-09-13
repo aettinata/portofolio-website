@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { motion, useReducedMotion, Variants } from "framer-motion";
 import { Button } from "@/components/ui/Button";
+import { Magnetic } from "@/components/animations/Magnetic";
 import { ArrowLeft } from "lucide-react";
 
 export default function NotFound() {
@@ -82,17 +83,19 @@ export default function NotFound() {
 
         {/* 6. Call to Action Button */}
         <motion.div variants={item} className="mt-8">
-          {/* Link dibungkus focus-visible agar outline tampil di luar tombol saat tab */}
-          <Link
-            href="/"
-            className="inline-block rounded-[980px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground focus-visible:ring-offset-2 focus-visible:ring-offset-background"
-            tabIndex={-1}
-          >
-            <Button variant="primary" className="gap-2" tabIndex={0} aria-label="Kembali ke Beranda">
-              <ArrowLeft className="h-5 w-5" />
-              Kembali ke Beranda
-            </Button>
-          </Link>
+          <Magnetic intensity={0.2}>
+            {/* Link dibungkus focus-visible agar outline tampil di luar tombol saat tab */}
+            <Link
+              href="/"
+              className="inline-block rounded-[980px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+              tabIndex={-1}
+            >
+              <Button variant="primary" className="gap-2" tabIndex={0} aria-label="Kembali ke Beranda">
+                <ArrowLeft className="h-5 w-5" />
+                Kembali ke Beranda
+              </Button>
+            </Link>
+          </Magnetic>
         </motion.div>
       </motion.div>
     </div>

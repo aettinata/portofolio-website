@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "./Button";
 import { ThemeToggle } from "./ThemeToggle";
+import { Magnetic } from "@/components/animations/Magnetic";
 import { Download, Menu, X } from "lucide-react";
 
 export function Header() {
@@ -83,11 +84,13 @@ export function Header() {
 
             <div className="flex items-center gap-2">
               <ThemeToggle />
-              <a href="/resume.pdf" target="_blank" rel="noreferrer" className="hidden sm:inline-flex">
-                <Button variant="primary" className="min-h-[44px] px-4 py-0 text-[12px] gap-2 ml-2">
-                  <Download size={14} /> Resume
-                </Button>
-              </a>
+              <Magnetic intensity={0.2} className="hidden sm:inline-flex">
+                <a href="/resume.pdf" target="_blank" rel="noreferrer">
+                  <Button variant="primary" className="min-h-[44px] px-4 py-0 text-[12px] gap-2 ml-2">
+                    <Download size={14} /> Resume
+                  </Button>
+                </a>
+              </Magnetic>
 
               {/* Mobile hamburger */}
               <button
