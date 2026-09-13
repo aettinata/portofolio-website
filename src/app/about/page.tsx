@@ -1,5 +1,6 @@
 import { FadeIn } from "@/components/animations/FadeIn";
 import { ExperienceTimeline } from "@/components/sections/ExperienceTimeline";
+import { BentoGrid } from "@/components/sections/BentoGrid";
 import { NowSection } from "@/components/sections/NowSection";
 import { SectionDivider } from "@/components/ui/SectionDivider";
 import profileData from "@/data/profile.json";
@@ -37,30 +38,7 @@ export default function AboutPage() {
 
       <SectionDivider className="mb-16 md:mb-20" />
 
-      <FadeIn delay={0.1}>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16 md:mb-20">
-          <div>
-            <h2 className="text-[14px] font-semibold tracking-wide text-text-secondary mb-6 border-b border-border pb-3 uppercase">Keahlian Teknis</h2>
-            <div className="flex flex-wrap gap-2">
-              {profileData.skills.map((skill: string) => (
-                <span key={skill} className="bg-bg-secondary px-4 py-2 rounded-[980px] text-[13px] font-medium tracking-wide text-text-primary">
-                  {skill}
-                </span>
-              ))}
-            </div>
-          </div>
-          <div>
-            <h2 className="text-[14px] font-semibold tracking-wide text-text-secondary mb-6 border-b border-border pb-3 uppercase">Minat & Eksplorasi</h2>
-            <div className="flex flex-wrap gap-2">
-              {profileData.interests.map((interest: string) => (
-                <span key={interest} className="bg-bg-primary border border-border px-4 py-2 rounded-[980px] text-[13px] font-medium tracking-wide text-text-primary">
-                  {interest}
-                </span>
-              ))}
-            </div>
-          </div>
-        </div>
-      </FadeIn>
+      <BentoGrid className="mb-16 md:mb-20" />
 
       <SectionDivider className="mb-16 md:mb-20" />
 
