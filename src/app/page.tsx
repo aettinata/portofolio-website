@@ -1,4 +1,5 @@
 import { HeroHeadline } from "@/components/animations/HeroHeadline";
+import { HeroScrollParallax } from "@/components/animations/HeroScrollParallax";
 import { FadeIn } from "@/components/animations/FadeIn";
 import { Magnetic } from "@/components/animations/Magnetic";
 import { TechMarquee } from "@/components/sections/TechMarquee";
@@ -12,7 +13,7 @@ export default function Home() {
     <div className="flex-1 flex flex-col relative bg-bg-primary min-w-0 w-full overflow-x-hidden">
       <div className="container mx-auto max-w-[1024px] px-6 sm:px-12 relative z-10 py-24 md:py-32">
         
-        <div className="w-full flex flex-col items-start max-w-3xl">
+        <HeroScrollParallax className="max-w-3xl">
           <HeroHeadline className="mb-6" />
           
           <FadeIn delay={0.6}>
@@ -37,7 +38,7 @@ export default function Home() {
               </Magnetic>
             </div>
           </FadeIn>
-        </div>
+        </HeroScrollParallax>
       </div>
 
       <div className="mt-auto w-full overflow-hidden">
