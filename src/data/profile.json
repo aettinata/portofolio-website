@@ -1,8 +1,15 @@
 {
   "name": "Faisal Adama",
-  "title": "Fresh Graduate IT | Web Developer",
-  "tagline": "Membangun solusi digital yang berdampak",
-  "bio": "Lulusan IT dengan minat besar dalam pengembangan web modern dan desain antarmuka pengguna.",
+  "title": "Fresh Graduate IT | Full-Stack Developer & AI Enthusiast",
+  "tagline": "Membangun solusi digital yang berdampak — dari web modern hingga sistem cerdas.",
+  "bio": "Lulusan S1 Teknik Informatika dengan minat mendalam pada pengembangan web modern, aplikasi mobile, machine learning, dan rekayasa data. Berfokus pada perpaduan antara estetika antarmuka, performa sistem, dan pemanfaatan AI untuk menghasilkan produk digital yang skalabel dan berdampak.",
+  "email": "aettinata@gmail.com",
+  "location": "Semarang, Indonesia",
+  "social": {
+    "github": "https://github.com/aettinata",
+    "linkedin": "https://linkedin.com/in/username",
+    "twitter": "https://twitter.com/username"
+  },
   "education": [
     {
       "degree": "S1 Teknik Informatika",
@@ -15,18 +22,25 @@
     "React",
     "Next.js",
     "Tailwind CSS",
-    "Framer Motion",
-    "Node.js"
+    "Node.js",
+    "Kotlin",
+    "Python",
+    "TensorFlow",
+    "PostgreSQL",
+    "Docker"
   ],
   "interests": [
     "UI/UX Design",
+    "Machine Learning",
+    "Mobile Development",
+    "Data Engineering",
     "Open Source",
     "Artificial Intelligence"
   ],
   "now": {
-    "learning": "Next.js 16 & AI-assisted development",
-    "reading": "Refactoring UI",
-    "building": "Portofolio pribadi ini",
-    "listening": "Lo-fi hip hop"
+    "learning": "Next.js 16, Kotlin Multiplatform & Deep Learning",
+    "reading": "Refactoring UI & Hands-On Machine Learning",
+    "building": "Portofolio pribadi & proyek AI-assisted tooling",
+    "listening": "Lo-fi hip hop & instrumental focus"
   }
 }
