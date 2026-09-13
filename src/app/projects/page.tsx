@@ -4,6 +4,7 @@ import { useState } from "react";
 import { FadeIn } from "@/components/animations/FadeIn";
 import { AnimatedTabs } from "@/components/ui/AnimatedTabs";
 import { ProjectCard } from "@/components/ui/ProjectCard";
+import { SectionDivider } from "@/components/ui/SectionDivider";
 import projectsData from "@/data/projects.json";
 
 export default function ProjectsPage() {
@@ -14,7 +15,7 @@ export default function ProjectsPage() {
 
   return (
     <div className="container mx-auto max-w-[1024px] px-6 sm:px-12 py-12 md:py-24 bg-bg-primary">
-      <FadeIn className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+      <FadeIn className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
         <div className="max-w-2xl">
           <h1 className="text-page-title text-text-primary mb-4">
             Karya Pilihan
@@ -27,6 +28,8 @@ export default function ProjectsPage() {
           onChange={setActiveTab} 
         />
       </FadeIn>
+
+      <SectionDivider className="mb-12 md:mb-16" />
 
       <h2 className="sr-only">Daftar Proyek</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">

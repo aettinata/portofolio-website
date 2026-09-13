@@ -1,6 +1,7 @@
 import { FadeIn } from "@/components/animations/FadeIn";
 import { ExperienceTimeline } from "@/components/sections/ExperienceTimeline";
 import { NowSection } from "@/components/sections/NowSection";
+import { SectionDivider } from "@/components/ui/SectionDivider";
 import profileData from "@/data/profile.json";
 
 export default function AboutPage() {
@@ -32,10 +33,12 @@ export default function AboutPage() {
         </div>
       </FadeIn>
 
-      <NowSection className="mb-24 md:mb-32" />
+      <NowSection className="mb-16 md:mb-20" />
+
+      <SectionDivider className="mb-16 md:mb-20" />
 
       <FadeIn delay={0.1}>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-32">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16 md:mb-20">
           <div>
             <h2 className="text-[14px] font-semibold tracking-wide text-text-secondary mb-6 border-b border-border pb-3 uppercase">Keahlian Teknis</h2>
             <div className="flex flex-wrap gap-2">
@@ -58,6 +61,8 @@ export default function AboutPage() {
           </div>
         </div>
       </FadeIn>
+
+      <SectionDivider className="mb-16 md:mb-20" />
 
       <ExperienceTimeline education={profileData.education} experience={experienceData} />
     </div>
