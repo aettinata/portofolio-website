@@ -31,6 +31,19 @@ export interface Project extends BaseProject {
   date?: string;
 }
 
+// Certification Type
+export interface Certification {
+  id: string;
+  slug: string;
+  name: string;
+  issuer: string;
+  issueDate: string;
+  expiryDate?: string;
+  credentialId?: string;
+  credentialUrl?: string;
+  image?: string;
+}
+
 // Profile Type
 export interface Profile {
   name: string;
