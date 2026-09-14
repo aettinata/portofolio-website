@@ -14,11 +14,31 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://adamaettinata.vercel.app"),
-  title: "Faisal Adama — Developer Portfolio",
-  description: "Website portofolio pribadi Faisal Adama. Membangun solusi digital yang elegan dan berdampak.",
+  title: {
+    default: "Faisal Adama — Full-Stack Developer & AI Enthusiast",
+    template: "%s | Faisal Adama",
+  },
+  description:
+    "Portofolio pribadi Faisal Adama, Full-Stack Developer & AI Enthusiast asal Semarang. Membangun web modern, aplikasi mobile, dan sistem cerdas berdampak.",
+  keywords: [
+    "Faisal Adama",
+    "portofolio",
+    "web developer",
+    "full-stack",
+    "AI",
+    "Next.js",
+    "TypeScript",
+    "Semarang",
+  ],
+  authors: [{ name: "Faisal Adama", url: "https://adamaettinata.vercel.app" }],
+  creator: "Faisal Adama",
+  alternates: {
+    canonical: "https://adamaettinata.vercel.app",
+  },
   openGraph: {
-    title: "Faisal Adama — Developer Portfolio",
-    description: "Website portofolio pribadi Faisal Adama. Membangun solusi digital yang elegan dan berdampak.",
+    title: "Faisal Adama — Full-Stack Developer & AI Enthusiast",
+    description:
+      "Portofolio pribadi Faisal Adama, Full-Stack Developer & AI Enthusiast asal Semarang. Membangun web modern, aplikasi mobile, dan sistem cerdas berdampak.",
     url: "https://adamaettinata.vercel.app",
     siteName: "Faisal Adama Portfolio",
     locale: "id_ID",
@@ -26,8 +46,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Faisal Adama — Developer Portfolio",
-    description: "Website portofolio pribadi Faisal Adama. Membangun solusi digital yang elegan dan berdampak.",
+    title: "Faisal Adama — Full-Stack Developer & AI Enthusiast",
+    description:
+      "Portofolio pribadi Faisal Adama, Full-Stack Developer & AI Enthusiast asal Semarang. Membangun web modern, aplikasi mobile, dan sistem cerdas berdampak.",
   },
 };
 
