@@ -9,6 +9,8 @@ interface ExperienceItem {
   institution?: string;
   company?: string;
   year: string;
+  gpa?: string;
+  honors?: string;
   description?: string;
 }
 
@@ -19,6 +21,7 @@ interface ExperienceTimelineProps {
 
 export function ExperienceTimeline({ education, experience }: ExperienceTimelineProps) {
   const containerRef = useRef<HTMLDivElement>(null);
+  const shouldReduceMotion = useReducedMotion();
   
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -29,11 +32,11 @@ export function ExperienceTimeline({ education, experience }: ExperienceTimeline
 
   return (
     <div ref={containerRef} className="relative max-w-4xl mx-auto">
-      <div className="text-center mb-24">
+      <div className="text-center mb-16 md:mb-24">
         <h2 className="text-section-title text-text-primary mb-4">
           Perjalanan Karir
         </h2>
-        <p className="text-body text-text-secondary">Jejak langkah pendidikan dan pengalaman profesional.</p>
+        <p className="text-body text-text-secondary">Jejak langkah pengalaman rekayasa, kepemimpinan, dan pendidikan formal.</p>
       </div>
 
       <div className="relative">
@@ -43,7 +46,7 @@ export function ExperienceTimeline({ education, experience }: ExperienceTimeline
         {/* Animated fill line */}
         <motion.div 
           className="absolute left-4 md:left-1/2 md:-translate-x-1/2 top-0 w-[1px] bg-accent"
-          style={{ height: lineHeight }}
+          style={{ height: shouldReduceMotion ? "100%" : lineHeight }}
         />
 
         <div className="space-y-8 md:space-y-16">
@@ -64,34 +67,41 @@ export function ExperienceTimeline({ education, experience }: ExperienceTimeline
   );
 }
 
-function TimelineItem({ item, index, isLeft }: { item: ExperienceItem, index: number, isLeft: boolean }) {
+function TimelineItem({ item, isLeft }: { item: ExperienceItem, index: number, isLeft: boolean }) {
   const title = item.role || item.degree;
   const subtitle = item.company || item.institution;
   const shouldReduceMotion = useReducedMotion();
 
   return (
     <motion.div 
-      initial={shouldReduceMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+      initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
-      transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }} // Apple ease out
+      transition={{ duration: shouldReduceMotion ? 0 : 0.6, ease: [0.16, 1, 0.3, 1] }}
       className={`relative flex flex-col md:flex-row items-start md:items-center w-full my-8 ${isLeft ? "md:justify-start" : "md:justify-end"}`}
     >
       {/* Node indicator */}
       <div className="absolute left-4 md:left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-bg-primary border-[3px] border-border z-10 transition-colors duration-300 hover:border-accent" />
       
       {/* Content Card */}
-      <div className={`ml-12 md:ml-0 w-full md:w-[45%] p-6 md:p-8 bg-bg-secondary rounded-2xl transition-all duration-300 hover:shadow-[0_4px_24px_rgba(0,0,0,0.06)] group ${isLeft ? "md:mr-auto" : "md:ml-auto"}`}>
-        <span className="inline-block mb-3 text-[12px] font-medium tracking-wide text-text-secondary uppercase">
-          {item.year}
-        </span>
+      <div className={`ml-12 md:ml-0 w-full md:w-[45%] p-6 md:p-8 bg-bg-secondary rounded-2xl border border-border/70 transition-all duration-300 hover:shadow-[0_4px_24px_rgba(0,0,0,0.06)] hover:border-text-primary/20 group ${isLeft ? "md:mr-auto" : "md:ml-auto"}`}>
+        <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
+          <span className="text-[12px] font-medium tracking-wide text-text-secondary uppercase">
+            {item.year}
+          </span>
+          {item.honors && (
+            <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-bg-primary border border-border text-text-primary">
+              {item.honors} {item.gpa ? `· IPK ${item.gpa}` : ""}
+            </span>
+          )}
+        </div>
         <h3 className="text-card-title text-text-primary mb-1">
           {title}
         </h3>
         <p className="text-[15px] font-medium text-text-secondary mb-3">{subtitle}</p>
         
         {item.description && (
-          <p className="text-body text-text-secondary">
+          <p className="text-body text-text-secondary text-sm leading-relaxed">
             {item.description}
           </p>
         )}

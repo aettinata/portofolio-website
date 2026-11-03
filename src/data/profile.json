@@ -1,8 +1,8 @@
 {
   "name": "Faisal Adama",
   "title": "Fresh Graduate IT | Full-Stack Developer & AI Enthusiast",
-  "tagline": "Membangun solusi digital yang berdampak — dari web modern hingga sistem cerdas.",
-  "bio": "Lulusan S1 Teknik Informatika Universitas Negeri Semarang (IPK 3.72, Cum Laude) dengan minat mendalam pada pengembangan web modern, aplikasi mobile Android, dan rekayasa machine learning. Berpengalaman membangun aplikasi web enterprise, sistem machine learning deteksi keamanan siber, serta digitalisasi operasional UMKM melalui rekayasa perangkat lunak yang presisi.",
+  "tagline": "Membangun solusi digital yang teruji — dari arsitektur web modern hingga sistem machine learning.",
+  "bio": "Lulusan S1 Teknik Informatika Universitas Negeri Semarang (IPK 3.72, Cum Laude) dengan fokus rekayasa perangkat lunak full-stack modern dan machine learning. Berpengalaman membangun platform enterprise skala produksi dengan Next.js 16 dan PostgreSQL, serta meneliti optimasi model deteksi keamanan siber berbasis LightGBM dan algoritma metaheuristik BGWO.",
   "email": "aettinata@gmail.com",
   "location": "Semarang, Indonesia",
   "social": {
@@ -22,8 +22,14 @@
   ],
   "experience": [
     {
-      "role": "Student Group Leader (Koordinator Desa) — KKN GIAT 13 UNNES",
-      "company": "Pusat Pengembangan KKN UNNES (Kelurahan Wonolopo, Semarang)",
+      "role": "Independent Full-Stack & AI Engineer",
+      "company": "Proyek Mandiri & Riset",
+      "year": "2025 — Sekarang",
+      "description": "Merancang dan membangun platform web enterprise BrewLab (Next.js 16, Auth.js v5, PostgreSQL, PWA) serta riset deteksi ancaman insider threat berbasis machine learning (LightGBM & BGWO)."
+    },
+    {
+      "role": "Student Group Leader (Koordinator Desa)",
+      "company": "KKN GIAT 13 UNNES (Kelurahan Wonolopo, Semarang)",
       "year": "Sep 2025 — Nov 2025",
       "description": "Memimpin kelompok mahasiswa lintas disiplin dalam merancang dan mengeksekusi program pengabdian masyarakat. Berkoordinasi intensif dengan perangkat kelurahan dan pemangku kepentingan setempat untuk program digitalisasi UMKM lokal serta edukasi masyarakat."
     },
@@ -39,7 +45,13 @@
       "title": "TOEFL ITP",
       "score": "570",
       "year": "2025",
-      "description": "Skor kemahiran bahasa Inggris resmi institutional testing program."
+      "description": "Pengujian resmi kemahiran bahasa Inggris standar akademik dan profesional."
+    },
+    {
+      "title": "9 Sertifikasi Resmi Dicoding",
+      "score": "9 Sertifikat",
+      "year": "2024",
+      "description": "Kurikulum terakreditasi Google Partner mencakup Android Intermediate, Machine Learning on Android, dan Software Engineering."
     }
   ],
   "skills": [
@@ -47,25 +59,26 @@
     "Next.js",
     "React",
     "Tailwind CSS",
-    "Kotlin",
-    "Jetpack Compose",
+    "PostgreSQL",
+    "Prisma ORM",
     "Python",
     "LightGBM",
-    "PostgreSQL",
-    "Prisma ORM"
+    "Scikit-learn",
+    "Kotlin",
+    "Git"
   ],
   "interests": [
-    "UI/UX Design",
-    "Machine Learning",
-    "Mobile Development",
-    "Data Engineering",
-    "Cybersecurity",
-    "Open Source"
+    "Full-Stack Web Architecture",
+    "Machine Learning & Metaheuristics",
+    "Cybersecurity Analytics",
+    "Mobile Engineering",
+    "UI/UX Design Systems",
+    "Open Source Tooling"
   ],
   "now": {
-    "learning": "Next.js 16, Kotlin Multiplatform & Deep Learning",
-    "reading": "Refactoring UI & Hands-On Machine Learning",
-    "building": "Portofolio pribadi & proyek AI-assisted tooling",
+    "learning": "Arsitektur Full-Stack Next.js 16, Vector Search (pgvector), & Optimasi Model Machine Learning",
+    "reading": "Designing Data-Intensive Applications & Dokumentasi Teknis Sistem Terdistribusi",
+    "building": "BREWLAB Specialty Coffee Platform & AI-Integrated Personal Portfolio",
     "listening": "Lo-fi hip hop & instrumental focus"
   }
 }

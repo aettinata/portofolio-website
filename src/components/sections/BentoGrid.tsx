@@ -4,11 +4,11 @@ import profileData from "@/data/profile.json";
 import { MapPin, Briefcase } from "lucide-react";
 import { 
   SiNextdotjs, 
-  SiReact, 
   SiTypescript, 
   SiTailwindcss, 
-  SiNodedotjs, 
-  SiGit 
+  SiPostgresql, 
+  SiPython, 
+  SiKotlin 
 } from "react-icons/si";
 
 interface BentoGridProps {
@@ -17,11 +17,11 @@ interface BentoGridProps {
 
 const techStack = [
   { icon: SiNextdotjs, name: "Next.js" },
-  { icon: SiReact, name: "React" },
   { icon: SiTypescript, name: "TypeScript" },
   { icon: SiTailwindcss, name: "Tailwind" },
-  { icon: SiNodedotjs, name: "Node.js" },
-  { icon: SiGit, name: "Git" },
+  { icon: SiPostgresql, name: "PostgreSQL" },
+  { icon: SiPython, name: "Python" },
+  { icon: SiKotlin, name: "Kotlin" },
 ];
 
 export function BentoGrid({ className }: BentoGridProps) {
@@ -46,10 +46,10 @@ export function BentoGrid({ className }: BentoGridProps) {
                 </span>
               </div>
               <h3 className="text-xl sm:text-2xl font-semibold text-text-primary mb-3 tracking-tight">
-                Membangun antarmuka web modern dengan presisi estetika tinggi.
+                Membangun aplikasi web modern dan sistem komputasi cerdas.
               </h3>
               <p className="text-body text-text-secondary text-sm leading-relaxed">
-                Menggabungkan ketelitian tipografi Apple-inspired, interaksi mikro yang halus, dan arsitektur performa tinggi berbasis Next.js & TypeScript.
+                Menggabungkan presisi estetika Apple-inspired, arsitektur performa tinggi Next.js &amp; TypeScript, serta riset implementasi machine learning yang teruji.
               </p>
             </div>
             <div className="mt-6 pt-4 border-t border-border/50 flex items-center gap-2 text-xs text-text-secondary">
