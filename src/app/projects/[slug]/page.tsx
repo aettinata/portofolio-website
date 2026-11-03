@@ -143,6 +143,36 @@ export default async function ProjectDetailPage({ params }: PageProps) {
             </FadeIn>
           )}
 
+          {project.architectureDiagram && (
+            <FadeIn delay={0.28}>
+              <div className="space-y-4">
+                <div className="flex flex-wrap items-center justify-between gap-2">
+                  <h2 className="text-xl font-semibold text-text-primary tracking-tight">
+                    Arsitektur Sistem
+                  </h2>
+                  <span className="text-[11px] font-mono uppercase tracking-wider text-text-secondary px-2.5 py-1 rounded-full bg-bg-secondary border border-border">
+                    Vector Architecture
+                  </span>
+                </div>
+                <div
+                  tabIndex={0}
+                  role="region"
+                  aria-label={`Diagram Arsitektur Sistem untuk ${project.title}`}
+                  className="w-full rounded-2xl border border-border/70 bg-[#0a0a0c] p-2 sm:p-4 overflow-x-auto focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                >
+                  <Image
+                    src={project.architectureDiagram}
+                    alt={`Diagram Arsitektur ${project.title}: Alur 4-Layer RBAC Security dan Resilient Data Layer`}
+                    width={1200}
+                    height={750}
+                    unoptimized
+                    className="w-full min-w-[680px] md:min-w-full max-w-full h-auto rounded-lg block"
+                  />
+                </div>
+              </div>
+            </FadeIn>
+          )}
+
           {project.technologies && project.technologies.length > 0 && (
             <FadeIn delay={0.3}>
               <h2 className="text-xl font-semibold text-text-primary mb-4 tracking-tight">

@@ -1,0 +1,305 @@
+<svg viewBox="0 0 1200 750" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="brewlab-arch-title brewlab-arch-desc" style="background:#0a0a0c; font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;">
+  <title id="brewlab-arch-title">BrewLab Architecture — 4-Layer RBAC Security and Resilient Data Layer</title>
+  <desc id="brewlab-arch-desc">Architectural diagram detailing BrewLab's 4-layer RBAC security architecture and resilient zero-downtime data failover mechanism.</desc>
+
+  <defs>
+    <!-- Background Grid -->
+    <pattern id="grid-pattern" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1d1d22" stroke-width="0.75" />
+    </pattern>
+
+    <!-- Linear Gradients for Apple-inspired subtle dark depth -->
+    <linearGradient id="header-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#8e8e93" />
+    </linearGradient>
+
+    <linearGradient id="card-grad-dark" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#18181c" />
+      <stop offset="100%" stop-color="#111114" />
+    </linearGradient>
+
+    <linearGradient id="card-grad-accent" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0c1a2e" />
+      <stop offset="100%" stop-color="#0a121d" />
+    </linearGradient>
+
+    <linearGradient id="card-grad-amber" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#24190c" />
+      <stop offset="100%" stop-color="#171109" />
+    </linearGradient>
+
+    <!-- Arrowheads -->
+    <marker id="arrow-blue" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#0A84FF" />
+    </marker>
+    <marker id="arrow-gray" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#6e6e73" />
+    </marker>
+    <marker id="arrow-amber" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#f59e0b" />
+    </marker>
+    <marker id="arrow-green" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#30d158" />
+    </marker>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="1200" height="750" fill="#0a0a0c" />
+  <rect width="1200" height="750" fill="url(#grid-pattern)" opacity="0.85" />
+
+  <!-- Outer Border Frame -->
+  <rect x="16" y="16" width="1168" height="718" rx="16" fill="none" stroke="#24242a" stroke-width="1" />
+
+  <!-- ========================================== -->
+  <!-- HEADER SECTION                             -->
+  <!-- ========================================== -->
+  <g transform="translate(40, 42)">
+    <!-- Pill Badge -->
+    <rect x="0" y="0" width="168" height="24" rx="12" fill="#141418" stroke="#2c2c34" stroke-width="1" />
+    <circle cx="12" cy="12" r="4" fill="#0A84FF" />
+    <text x="24" y="16" fill="#0A84FF" font-size="10.5" font-weight="600" letter-spacing="0.08em">BREWLAB ARCHITECTURE</text>
+
+    <!-- Title & Subtitle -->
+    <text x="0" y="46" fill="url(#header-grad)" font-size="20" font-weight="600" letter-spacing="-0.02em">
+      4-Layer RBAC Security Pipeline &amp; Fault-Tolerant Resilient Data Layer
+    </text>
+    <text x="0" y="66" fill="#8e8e93" font-size="12" font-weight="400">
+      Zero-trust request authorization flow coupled with automatic cold-start failover and offline PWA service worker cache
+    </text>
+
+    <!-- Status pill on top right -->
+    <rect x="940" y="6" width="180" height="26" rx="13" fill="#141418" stroke="#2c2c34" stroke-width="1" />
+    <circle cx="954" cy="19" r="4" fill="#30d158" />
+    <text x="966" y="23" fill="#e5e5ea" font-size="11" font-weight="500">Production Verified • SCA 88+</text>
+  </g>
+
+  <!-- ========================================== -->
+  <!-- SECTION 1: 4-LAYER RBAC SECURITY           -->
+  <!-- ========================================== -->
+  <g transform="translate(40, 130)">
+    <!-- Boundary Container -->
+    <rect x="0" y="0" width="1120" height="260" rx="14" fill="#0e0e12" stroke="#24242a" stroke-width="1" />
+
+    <!-- Container Header -->
+    <rect x="18" y="16" width="220" height="22" rx="4" fill="#141720" stroke="#0A84FF" stroke-opacity="0.4" stroke-width="0.8" />
+    <text x="26" y="31" fill="#0A84FF" font-size="10.5" font-weight="600" letter-spacing="0.06em">SECTION 1: 4-LAYER RBAC SECURITY FLOW</text>
+    <text x="250" y="31" fill="#6e6e73" font-size="11">Progressive verification before payload execution &amp; view rendering</text>
+
+    <!-- Arrows between boxes -->
+    <!-- Request to Layer 1 -->
+    <line x1="165" y1="140" x2="200" y2="140" stroke="#0A84FF" stroke-width="1.5" marker-end="url(#arrow-blue)" />
+    <!-- Layer 1 to Layer 2 -->
+    <line x1="395" y1="140" x2="430" y2="140" stroke="#0A84FF" stroke-width="1.5" marker-end="url(#arrow-blue)" />
+    <!-- Layer 2 to Layer 3 -->
+    <line x1="625" y1="140" x2="660" y2="140" stroke="#0A84FF" stroke-width="1.5" marker-end="url(#arrow-blue)" />
+    <!-- Layer 3 to Layer 4 -->
+    <line x1="855" y1="140" x2="890" y2="140" stroke="#0A84FF" stroke-width="1.5" marker-end="url(#arrow-blue)" />
+
+    <!-- Block 0: Incoming Request -->
+    <g transform="translate(18, 56)">
+      <rect width="145" height="175" rx="10" fill="url(#card-grad-dark)" stroke="#38383a" stroke-width="1" />
+      <rect x="12" y="14" width="70" height="18" rx="4" fill="#24242a" />
+      <text x="18" y="27" fill="#8e8e93" font-size="9.5" font-weight="600">TRIGGER</text>
+      <text x="12" y="52" fill="#ffffff" font-size="13" font-weight="600">Client Request</text>
+      <text x="12" y="68" fill="#8e8e93" font-size="10.5">HTTPS / Browser / PWA</text>
+      
+      <line x1="12" y1="80" x2="133" y2="80" stroke="#2c2c32" stroke-width="0.8" />
+      
+      <text x="12" y="98" fill="#6e6e73" font-size="10">• Page Navigation</text>
+      <text x="12" y="116" fill="#6e6e73" font-size="10">• Server Action Post</text>
+      <text x="12" y="134" fill="#6e6e73" font-size="10">• REST / Route Handler</text>
+      <text x="12" y="152" fill="#6e6e73" font-size="10">• Cupping Data Query</text>
+    </g>
+
+    <!-- Block 1: Layer 1 Edge Middleware -->
+    <g transform="translate(202, 56)">
+      <rect width="190" height="175" rx="10" fill="url(#card-grad-accent)" stroke="#0A84FF" stroke-width="1.2" stroke-opacity="0.8" />
+      <rect x="14" y="14" width="60" height="18" rx="4" fill="#0A84FF" fill-opacity="0.2" />
+      <text x="20" y="27" fill="#0A84FF" font-size="9.5" font-weight="600">LAYER 1</text>
+      <text x="14" y="52" fill="#ffffff" font-size="13" font-weight="600">Edge Middleware</text>
+      <text x="14" y="68" fill="#0A84FF" font-size="10.5" font-weight="500">Vercel Edge Runtime</text>
+
+      <line x1="14" y1="80" x2="176" y2="80" stroke="#1d2a3c" stroke-width="0.8" />
+
+      <text x="14" y="98" fill="#d2d2d7" font-size="10.5">• Auth.js v5 JWT Verify</text>
+      <text x="14" y="116" fill="#d2d2d7" font-size="10.5">• Sliding Session Refresh</text>
+      <text x="14" y="134" fill="#d2d2d7" font-size="10.5">• IP Rate Limiting Guard</text>
+      <text x="14" y="152" fill="#8e8e93" font-size="10">• Rejection: 401 / 429</text>
+    </g>
+
+    <!-- Block 2: Layer 2 RSC Page Guard -->
+    <g transform="translate(432, 56)">
+      <rect width="190" height="175" rx="10" fill="url(#card-grad-dark)" stroke="#38383a" stroke-width="1" />
+      <rect x="14" y="14" width="60" height="18" rx="4" fill="#24242a" />
+      <text x="20" y="27" fill="#8e8e93" font-size="9.5" font-weight="600">LAYER 2</text>
+      <text x="14" y="52" fill="#ffffff" font-size="13" font-weight="600">RSC Page Guard</text>
+      <text x="14" y="68" fill="#8e8e93" font-size="10.5">React Server Component</text>
+
+      <line x1="14" y1="80" x2="176" y2="80" stroke="#2c2c32" stroke-width="0.8" />
+
+      <text x="14" y="98" fill="#d2d2d7" font-size="10.5">• Server-Side auth() Check</text>
+      <text x="14" y="116" fill="#d2d2d7" font-size="10.5">• Deep Route Permissions</text>
+      <text x="14" y="134" fill="#d2d2d7" font-size="10.5">• Zero Client Secret Leak</text>
+      <text x="14" y="152" fill="#8e8e93" font-size="10">• Unauthorized Redirect</text>
+    </g>
+
+    <!-- Block 3: Layer 3 Server Actions -->
+    <g transform="translate(662, 56)">
+      <rect width="190" height="175" rx="10" fill="url(#card-grad-accent)" stroke="#0A84FF" stroke-width="1.2" stroke-opacity="0.8" />
+      <rect x="14" y="14" width="60" height="18" rx="4" fill="#0A84FF" fill-opacity="0.2" />
+      <text x="20" y="27" fill="#0A84FF" font-size="9.5" font-weight="600">LAYER 3</text>
+      <text x="14" y="52" fill="#ffffff" font-size="13" font-weight="600">Server Actions</text>
+      <text x="14" y="68" fill="#0A84FF" font-size="10.5" font-weight="500">Next.js Mutation Engine</text>
+
+      <line x1="14" y1="80" x2="176" y2="80" stroke="#1d2a3c" stroke-width="0.8" />
+
+      <text x="14" y="98" fill="#d2d2d7" font-size="10.5">• Automated CSRF Shield</text>
+      <text x="14" y="116" fill="#d2d2d7" font-size="10.5">• Strict Zod Validation</text>
+      <text x="14" y="134" fill="#d2d2d7" font-size="10.5">• Role-Restricted Action</text>
+      <text x="14" y="152" fill="#8e8e93" font-size="10">• Sanitized Data Binding</text>
+    </g>
+
+    <!-- Block 4: Layer 4 Role-Based UI -->
+    <g transform="translate(892, 56)">
+      <rect width="210" height="175" rx="10" fill="url(#card-grad-dark)" stroke="#38383a" stroke-width="1" />
+      <rect x="14" y="14" width="60" height="18" rx="4" fill="#24242a" />
+      <text x="20" y="27" fill="#8e8e93" font-size="9.5" font-weight="600">LAYER 4</text>
+      <text x="14" y="52" fill="#ffffff" font-size="13" font-weight="600">Role-Based UI</text>
+      <text x="14" y="68" fill="#8e8e93" font-size="10.5">Adaptive Client View</text>
+
+      <line x1="14" y1="80" x2="196" y2="80" stroke="#2c2c32" stroke-width="0.8" />
+
+      <text x="14" y="96" fill="#0A84FF" font-size="10" font-weight="600">👑 Admin <tspan fill="#8e8e93" font-weight="400">: System Control</tspan></text>
+      <text x="14" y="112" fill="#d2d2d7" font-size="10" font-weight="600">📝 Editor <tspan fill="#8e8e93" font-weight="400">: Cupping &amp; CMS</tspan></text>
+      <text x="14" y="128" fill="#d2d2d7" font-size="10" font-weight="600">💼 Manager <tspan fill="#8e8e93" font-weight="400">: Shift &amp; Stock</tspan></text>
+      <text x="14" y="144" fill="#d2d2d7" font-size="10" font-weight="600">☕ Barista <tspan fill="#8e8e93" font-weight="400">: Brew Orders</tspan></text>
+      <text x="14" y="160" fill="#d2d2d7" font-size="10" font-weight="600">👤 Customer <tspan fill="#8e8e93" font-weight="400">: Public Catalog</tspan></text>
+    </g>
+  </g>
+
+  <!-- ========================================== -->
+  <!-- SECTION 2: RESILIENT DATA LAYER            -->
+  <!-- ========================================== -->
+  <g transform="translate(40, 410)">
+    <!-- Boundary Container -->
+    <rect x="0" y="0" width="1120" height="280" rx="14" fill="#0e0e12" stroke="#24242a" stroke-width="1" />
+
+    <!-- Container Header -->
+    <rect x="18" y="16" width="280" height="22" rx="4" fill="#141720" stroke="#0A84FF" stroke-opacity="0.4" stroke-width="0.8" />
+    <text x="26" y="31" fill="#0A84FF" font-size="10.5" font-weight="600" letter-spacing="0.06em">SECTION 2: RESILIENT DATA &amp; FAILOVER LAYER</text>
+    <text x="310" y="31" fill="#6e6e73" font-size="11">Neon Serverless cold-start defense with offline-first PWA fallback</text>
+
+    <!-- Connecting Lines -->
+    <!-- From Prisma to Neon (Primary Path - Upper) -->
+    <path d="M 220 95 L 290 95" stroke="#0A84FF" stroke-width="1.5" marker-end="url(#arrow-blue)" />
+    <text x="240" y="86" fill="#0A84FF" font-size="9" font-weight="600">PRIMARY</text>
+
+    <!-- From Neon to UI (Normal Response) -->
+    <path d="M 570 95 L 850 95" stroke="#30d158" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrow-green)" />
+    <text x="670" y="86" fill="#30d158" font-size="9.5" font-weight="600">Live Postgres Response (&lt;150ms)</text>
+
+    <!-- From Prisma to Failover Interceptor (Lower Branch on Timeout/Cold Start) -->
+    <path d="M 125 180 L 125 210 L 290 210" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="4,4" marker-end="url(#arrow-amber)" fill="none" />
+    <text x="135" y="202" fill="#f59e0b" font-size="9" font-weight="500">Cold-Start / Timeout (&gt;1.5s)</text>
+
+    <!-- From Failover Interceptor to Fallback Store -->
+    <line x1="570" y1="210" x2="600" y2="210" stroke="#f59e0b" stroke-width="1.5" marker-end="url(#arrow-amber)" />
+
+    <!-- From Fallback Store to UI (Fallback Response) -->
+    <path d="M 810 210 L 855 210 L 855 145" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="4,4" marker-end="url(#arrow-amber)" fill="none" />
+    <text x="862" y="195" fill="#f59e0b" font-size="9" font-weight="500">Cached / Static Feed</text>
+
+    <!-- Node 1: Prisma ORM Client -->
+    <g transform="translate(18, 56)">
+      <rect width="200" height="120" rx="10" fill="url(#card-grad-dark)" stroke="#38383a" stroke-width="1" />
+      <rect x="14" y="12" width="80" height="18" rx="4" fill="#24242a" />
+      <text x="20" y="25" fill="#8e8e93" font-size="9.5" font-weight="600">DATA CLIENT</text>
+      <text x="14" y="48" fill="#ffffff" font-size="13" font-weight="600">Prisma ORM</text>
+      <text x="14" y="64" fill="#8e8e93" font-size="10.5">Type-Safe Client Query</text>
+
+      <line x1="14" y1="74" x2="186" y2="74" stroke="#2c2c32" stroke-width="0.8" />
+
+      <text x="14" y="90" fill="#d2d2d7" font-size="10">• Sensory &amp; SCA Schemas</text>
+      <text x="14" y="106" fill="#d2d2d7" font-size="10">• Timeout Threshold Guard</text>
+    </g>
+
+    <!-- Node 2A: Neon Serverless PostgreSQL -->
+    <g transform="translate(295, 52)">
+      <rect width="275" height="88" rx="10" fill="url(#card-grad-accent)" stroke="#0A84FF" stroke-width="1.2" />
+      <rect x="14" y="12" width="135" height="18" rx="4" fill="#0A84FF" fill-opacity="0.2" />
+      <text x="20" y="25" fill="#0A84FF" font-size="9" font-weight="600">PRIMARY PERSISTENCE</text>
+      <text x="14" y="48" fill="#ffffff" font-size="13" font-weight="600">Neon Serverless PostgreSQL</text>
+      <text x="14" y="64" fill="#0A84FF" font-size="10.5">Connection Pooling &amp; Edge Driver</text>
+      <text x="14" y="79" fill="#8e8e93" font-size="9.5">Relational Coffee Batches &amp; Profiles</text>
+    </g>
+
+    <!-- Node 2B: Failover Interceptor -->
+    <g transform="translate(295, 165)">
+      <rect width="275" height="92" rx="10" fill="url(#card-grad-amber)" stroke="#f59e0b" stroke-width="1.2" />
+      <rect x="14" y="10" width="140" height="18" rx="4" fill="#f59e0b" fill-opacity="0.2" />
+      <text x="20" y="23" fill="#f59e0b" font-size="9" font-weight="600">FAILOVER INTERCEPTOR</text>
+      <text x="14" y="46" fill="#ffffff" font-size="13" font-weight="600">Cold-Start / Outage Trap</text>
+      <text x="14" y="62" fill="#f59e0b" font-size="10">Auto-Detect Timeout / Offline</text>
+      <text x="14" y="78" fill="#8e8e93" font-size="9.5">Intercepts DB freeze &amp; reroutes instantly</text>
+    </g>
+
+    <!-- Node 3: Static Fallback & PWA Service Worker -->
+    <g transform="translate(605, 160)">
+      <rect width="205" height="102" rx="10" fill="url(#card-grad-dark)" stroke="#52525b" stroke-width="1" />
+      <rect x="14" y="10" width="115" height="18" rx="4" fill="#24242a" />
+      <text x="20" y="23" fill="#8e8e93" font-size="9" font-weight="600">STANDBY REPOSITORY</text>
+      <text x="14" y="44" fill="#ffffff" font-size="12.5" font-weight="600">fallback-data.ts</text>
+      <text x="14" y="59" fill="#8e8e93" font-size="10">&amp; PWA Service Worker</text>
+      <text x="14" y="76" fill="#d2d2d7" font-size="9.5">• In-Memory Catalog Standby</text>
+      <text x="14" y="91" fill="#d2d2d7" font-size="9.5">• Offline Cache API Store</text>
+    </g>
+
+    <!-- Node 4: Zero-Downtime UI Response -->
+    <g transform="translate(860, 52)">
+      <rect width="242" height="205" rx="10" fill="url(#card-grad-accent)" stroke="#0A84FF" stroke-width="1.4" />
+      <rect x="14" y="12" width="150" height="18" rx="4" fill="#0A84FF" fill-opacity="0.2" />
+      <text x="20" y="25" fill="#0A84FF" font-size="9" font-weight="600">OUTPUT GUARANTEE</text>
+      <text x="14" y="48" fill="#ffffff" font-size="14" font-weight="600">Zero-Downtime UI</text>
+      <text x="14" y="65" fill="#0A84FF" font-size="10.5" font-weight="500">100% Core Experience Uptime</text>
+
+      <line x1="14" y1="76" x2="228" y2="76" stroke="#1d2a3c" stroke-width="0.8" />
+
+      <text x="14" y="96" fill="#ffffff" font-size="10.5" font-weight="500">⚡ Instant FCP &amp; LCP</text>
+      <text x="24" y="112" fill="#8e8e93" font-size="9.5">No white screen on cold start</text>
+
+      <text x="14" y="132" fill="#ffffff" font-size="10.5" font-weight="500">🔄 Stale-While-Revalidate</text>
+      <text x="24" y="148" fill="#8e8e93" font-size="9.5">Silent background DB sync</text>
+
+      <text x="14" y="168" fill="#ffffff" font-size="10.5" font-weight="500">📱 Offline-First PWA Access</text>
+      <text x="24" y="184" fill="#8e8e93" font-size="9.5">Sensory scores cached locally</text>
+    </g>
+  </g>
+
+  <!-- ========================================== -->
+  <!-- BOTTOM FOOTER / LEGEND                     -->
+  <!-- ========================================== -->
+  <g transform="translate(40, 706)">
+    <line x1="0" y1="0" x2="1120" y2="0" stroke="#1d1d24" stroke-width="1" />
+    
+    <!-- Legend items -->
+    <g transform="translate(0, 14)">
+      <line x1="0" y1="5" x2="20" y2="5" stroke="#0A84FF" stroke-width="1.5" />
+      <circle cx="10" cy="5" r="2.5" fill="#0A84FF" />
+      <text x="28" y="9" fill="#8e8e93" font-size="10">Primary Path / Active Guard</text>
+
+      <line x1="210" y1="5" x2="230" y2="5" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="3,3" />
+      <circle cx="220" cy="5" r="2.5" fill="#f59e0b" />
+      <text x="238" y="9" fill="#8e8e93" font-size="10">Failover / Standby Path</text>
+
+      <line x1="410" y1="5" x2="430" y2="5" stroke="#30d158" stroke-width="1.5" stroke-dasharray="3,3" />
+      <circle cx="420" cy="5" r="2.5" fill="#30d158" />
+      <text x="438" y="9" fill="#8e8e93" font-size="10">Live DB Stream</text>
+
+      <rect x="580" y="0" width="10" height="10" rx="2" fill="#141418" stroke="#38383a" stroke-width="1" />
+      <text x="598" y="9" fill="#8e8e93" font-size="10">Component Boundary</text>
+
+      <text x="960" y="9" fill="#6e6e73" font-size="10">BrewLab System Architecture v1.0</text>
+    </g>
+  </g>
+</svg>

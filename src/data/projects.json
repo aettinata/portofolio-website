@@ -26,7 +26,8 @@
     "githubUrl": "https://github.com/aettinata/BrewLab",
     "category": "Web",
     "date": "2026-10",
-    "featured": true
+    "featured": true,
+    "architectureDiagram": "/images/projects/brewlab-architecture.svg"
   },
   {
     "id": "project-1",

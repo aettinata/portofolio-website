@@ -29,6 +29,7 @@ export interface Project extends BaseProject {
   challenges?: string;
   solutions?: string;
   date?: string;
+  architectureDiagram?: string;
 }
 
 // Certification Type
