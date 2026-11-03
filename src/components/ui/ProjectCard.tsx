@@ -74,7 +74,7 @@ export function ProjectCard({ project, className = "" }: ProjectCardProps) {
               {project.category}
             </span>
             <div className="flex gap-4">
-              {project.githubUrl && (
+              {Boolean(project.githubUrl) && (
                 <a
                   href={project.githubUrl}
                   target="_blank"
@@ -86,7 +86,7 @@ export function ProjectCard({ project, className = "" }: ProjectCardProps) {
                   <FaGithub size={20} />
                 </a>
               )}
-              {project.demoUrl && (
+              {Boolean(project.demoUrl) && (
                 <a
                   href={project.demoUrl}
                   target="_blank"

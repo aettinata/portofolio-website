@@ -162,7 +162,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
                 >
                   <Image
                     src={project.architectureDiagram}
-                    alt={`Diagram Arsitektur ${project.title}: Alur 4-Layer RBAC Security dan Resilient Data Layer`}
+                    alt={`Diagram Arsitektur Sistem untuk ${project.title}`}
                     width={1200}
                     height={750}
                     unoptimized
@@ -193,12 +193,12 @@ export default async function ProjectDetailPage({ params }: PageProps) {
         </div>
 
         {/* CTA Actions */}
-        {(project.demoUrl || project.githubUrl) && (
+        {(Boolean(project.demoUrl) || Boolean(project.githubUrl)) && (
           <>
             <SectionDivider className="mb-8" />
             <FadeIn delay={0.35}>
               <div className="flex flex-wrap items-center gap-4">
-                {project.demoUrl && (
+                {Boolean(project.demoUrl) && (
                   <Magnetic intensity={0.2}>
                     <Button variant="primary" asChild>
                       <a
@@ -213,9 +213,9 @@ export default async function ProjectDetailPage({ params }: PageProps) {
                     </Button>
                   </Magnetic>
                 )}
-                {project.githubUrl && (
+                {Boolean(project.githubUrl) && (
                   <Magnetic intensity={0.2}>
-                    <Button variant="secondary" asChild>
+                    <Button variant={Boolean(project.demoUrl) ? "secondary" : "primary"} asChild>
                       <a
                         href={project.githubUrl}
                         target="_blank"

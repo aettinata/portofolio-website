@@ -1,0 +1,338 @@
+<svg viewBox="0 0 1200 750" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="threat-arch-title threat-arch-desc" style="background:#0a0a0c; font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;">
+  <title id="threat-arch-title">Insider Threat Detection Architecture — Anti-Leakage ML &amp; BGWO Optimization</title>
+  <desc id="threat-arch-desc">Architectural pipeline diagram detailing end-to-end insider threat detection: CERT r4.2 ingestion, anti-leakage partitioning, hybrid balancing, BGWO feature selection, and LightGBM inference.</desc>
+
+  <defs>
+    <!-- Background Grid -->
+    <pattern id="grid-pattern" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1d1d22" stroke-width="0.75" />
+    </pattern>
+
+    <!-- Linear Gradients for Apple-inspired subtle dark depth -->
+    <linearGradient id="header-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#8e8e93" />
+    </linearGradient>
+
+    <linearGradient id="card-dark" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#18181c" />
+      <stop offset="100%" stop-color="#111114" />
+    </linearGradient>
+
+    <linearGradient id="card-blue" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0c1a2e" />
+      <stop offset="100%" stop-color="#0a121d" />
+    </linearGradient>
+
+    <linearGradient id="card-amber" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#24190c" />
+      <stop offset="100%" stop-color="#171109" />
+    </linearGradient>
+
+    <linearGradient id="card-emerald" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#06281e" />
+      <stop offset="100%" stop-color="#051a14" />
+    </linearGradient>
+
+    <linearGradient id="card-purple" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#201133" />
+      <stop offset="100%" stop-color="#140a22" />
+    </linearGradient>
+
+    <!-- Arrowheads -->
+    <marker id="arrow-blue" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#0A84FF" />
+    </marker>
+    <marker id="arrow-emerald" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#10b981" />
+    </marker>
+    <marker id="arrow-amber" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#f59e0b" />
+    </marker>
+    <marker id="arrow-purple" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#a855f7" />
+    </marker>
+    <marker id="arrow-gray" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#6e6e73" />
+    </marker>
+  </defs>
+
+  <!-- Background Base Canvas -->
+  <rect width="1200" height="750" fill="#0a0a0c" />
+  <rect width="1200" height="750" fill="url(#grid-pattern)" opacity="0.6" />
+
+  <!-- Outer Frame -->
+  <rect x="20" y="20" width="1160" height="710" rx="16" stroke="#1d1d22" stroke-width="1.5" />
+
+  <!-- HEADER -->
+  <g transform="translate(45, 45)">
+    <circle cx="8" cy="8" r="4" fill="#0A84FF">
+      <animate attributeName="opacity" values="1;0.4;1" dur="3s" repeatCount="indefinite" />
+    </circle>
+    <text x="24" y="12" fill="url(#header-grad)" font-size="17" font-weight="600" letter-spacing="-0.02em">
+      Insider Threat Detection Pipeline — Anti-Leakage Preprocessing &amp; Metaheuristic Optimization
+    </text>
+    <text x="24" y="28" fill="#8e8e93" font-size="11" font-weight="400" letter-spacing="0.01em">
+      CERT r4.2 Behavioral Dataset · Isolated Stratified Split · SMOTE-ADASYN-GAN Hybrid Balancing · BGWO Feature Selection (36→8 Fitur) · LightGBM Model
+    </text>
+  </g>
+
+  <!-- ============================================================== -->
+  <!-- LAYER 1: DATA INGESTION & FEATURE ENGINEERING -->
+  <!-- ============================================================== -->
+  <g transform="translate(45, 90)">
+    <rect width="1110" height="95" rx="12" fill="#111114" stroke="#27272a" stroke-width="1" />
+    
+    <!-- Layer Label -->
+    <rect x="16" y="14" width="85" height="20" rx="4" fill="#18181c" stroke="#3f3f46" stroke-width="0.75" />
+    <text x="58" y="28" fill="#d4d4d8" font-size="9" font-weight="600" font-family="monospace" text-anchor="middle">LAYER 1</text>
+    <text x="110" y="28" fill="#f4f4f5" font-size="13" font-weight="600" letter-spacing="-0.01em">
+      Data Ingestion &amp; User-Day Behavioral Aggregation (CERT Insider Threat Test Dataset r4.2)
+    </text>
+
+    <!-- Box 1.1: Raw Multi-Domain Logs -->
+    <g transform="translate(16, 42)">
+      <rect width="250" height="42" rx="8" fill="url(#card-dark)" stroke="#3f3f46" stroke-width="1" />
+      <text x="14" y="19" fill="#f4f4f5" font-size="11" font-weight="600">5 Domain Log Aktivitas Mentah</text>
+      <text x="14" y="32" fill="#8e8e93" font-size="9.5">logon.csv · device.csv · file.csv · http · email</text>
+    </g>
+
+    <path d="M 276 63 L 304 63" stroke="#6e6e73" stroke-width="1.5" marker-end="url(#arrow-gray)" />
+
+    <!-- Box 1.2: Scope & Aggregation -->
+    <g transform="translate(314, 42)">
+      <rect width="250" height="42" rx="8" fill="url(#card-dark)" stroke="#3f3f46" stroke-width="1" />
+      <text x="14" y="19" fill="#f4f4f5" font-size="11" font-weight="600">180 Production Line Workers</text>
+      <text x="14" y="32" fill="#8e8e93" font-size="9.5">60.060 record harian (user-day granularitas)</text>
+    </g>
+
+    <path d="M 574 63 L 602 63" stroke="#6e6e73" stroke-width="1.5" marker-end="url(#arrow-gray)" />
+
+    <!-- Box 1.3: 36 Feature Engineering -->
+    <g transform="translate(612, 42)">
+      <rect width="240" height="42" rx="8" fill="url(#card-dark)" stroke="#3f3f46" stroke-width="1" />
+      <text x="14" y="19" fill="#f4f4f5" font-size="11" font-weight="600">36 Fitur Perilaku Karyawan</text>
+      <text x="14" y="32" fill="#8e8e93" font-size="9.5">Jam kerja vs luar jam kerja · PC pribadi/lain</text>
+    </g>
+
+    <path d="M 862 63 L 890 63" stroke="#6e6e73" stroke-width="1.5" marker-end="url(#arrow-gray)" />
+
+    <!-- Box 1.4: Extreme Class Imbalance -->
+    <g transform="translate(900, 42)">
+      <rect width="194" height="42" rx="8" fill="url(#card-amber)" stroke="#d97706" stroke-width="1" />
+      <text x="14" y="19" fill="#fbbf24" font-size="11" font-weight="600">Rasio Ketimpangan 1 : 236</text>
+      <text x="14" y="32" fill="#d97706" font-size="9.5">59.807 Normal (99.58%) vs 253 Malicious</text>
+    </g>
+  </g>
+
+  <!-- Connect Layer 1 to Layer 2 -->
+  <path d="M 600 185 L 600 200" stroke="#0A84FF" stroke-width="1.5" marker-end="url(#arrow-blue)" />
+
+  <!-- ============================================================== -->
+  <!-- LAYER 2: ANTI-LEAKAGE DATA PARTITIONING & ISOLATION BOUNDARY -->
+  <!-- ============================================================== -->
+  <g transform="translate(45, 203)">
+    <rect width="1110" height="110" rx="12" fill="#0d1117" stroke="#0A84FF" stroke-width="1.25" stroke-dasharray="6 3" />
+    
+    <!-- Layer Label -->
+    <rect x="16" y="14" width="85" height="20" rx="4" fill="#0c1a2e" stroke="#0A84FF" stroke-width="0.75" />
+    <text x="58" y="28" fill="#38bdf8" font-size="9" font-weight="600" font-family="monospace" text-anchor="middle">LAYER 2</text>
+    <text x="110" y="28" fill="#f4f4f5" font-size="13" font-weight="600" letter-spacing="-0.01em">
+      Anti-Data Leakage Boundary &amp; Isolated Data Partitioning
+    </text>
+    <text x="895" y="27" fill="#38bdf8" font-size="10" font-weight="500">Strict Preprocessing Isolation</text>
+
+    <!-- Box 2.1: Stratified Split 60:20:20 -->
+    <g transform="translate(16, 42)">
+      <rect width="330" height="56" rx="8" fill="url(#card-dark)" stroke="#3f3f46" stroke-width="1" />
+      <text x="14" y="19" fill="#f4f4f5" font-size="11" font-weight="600">Stratified Split di Awal Pipeline</text>
+      <text x="14" y="34" fill="#8e8e93" font-size="9.5">• Training Set (60%): 36.036 record (152 malicious)</text>
+      <text x="14" y="47" fill="#8e8e93" font-size="9.5">• Val (20% / 12.012) &amp; Test (20% / 12.012) belum tersentuh</text>
+    </g>
+
+    <path d="M 356 70 L 384 70" stroke="#0A84FF" stroke-width="1.5" marker-end="url(#arrow-blue)" />
+
+    <!-- Box 2.2: Isolated Scaling -->
+    <g transform="translate(394, 42)">
+      <rect width="320" height="56" rx="8" fill="url(#card-dark)" stroke="#3f3f46" stroke-width="1" />
+      <text x="14" y="19" fill="#f4f4f5" font-size="11" font-weight="600">Isolasi MinMaxScaler (Anti-Leakage)</text>
+      <text x="14" y="34" fill="#8e8e93" font-size="9.5">• MinMaxScaler di-fit HANYA pada data training</text>
+      <text x="14" y="47" fill="#8e8e93" font-size="9.5">• Hasil transformasi diterapkan ke validasi &amp; testing</text>
+    </g>
+
+    <path d="M 724 70 L 752 70" stroke="#0A84FF" stroke-width="1.5" marker-end="url(#arrow-blue)" />
+
+    <!-- Box 2.3: Noise Cleaning on Train -->
+    <g transform="translate(762, 42)">
+      <rect width="332" height="56" rx="8" fill="url(#card-dark)" stroke="#3f3f46" stroke-width="1" />
+      <text x="14" y="19" fill="#f4f4f5" font-size="11" font-weight="600">Pembersihan Outlier 3-Sigma &amp; t-SNE-DBSCAN</text>
+      <text x="14" y="34" fill="#8e8e93" font-size="9.5">• 1.213 noise normal dipangkas dari data latih</text>
+      <text x="14" y="47" fill="#10b981" font-size="9.5" font-weight="500">• 10 record noise malicious diselamatkan (minoritas utuh)</text>
+    </g>
+  </g>
+
+  <!-- Connect Layer 2 to Layer 3 -->
+  <path d="M 600 313 L 600 328" stroke="#10b981" stroke-width="1.5" marker-end="url(#arrow-emerald)" />
+
+  <!-- ============================================================== -->
+  <!-- LAYER 3: HYBRID DATA BALANCING (POST-SPLIT ON TRAIN ONLY) -->
+  <!-- ============================================================== -->
+  <g transform="translate(45, 331)">
+    <rect width="1110" height="100" rx="12" fill="#111114" stroke="#27272a" stroke-width="1" />
+    
+    <!-- Layer Label -->
+    <rect x="16" y="14" width="85" height="20" rx="4" fill="#18181c" stroke="#3f3f46" stroke-width="0.75" />
+    <text x="58" y="28" fill="#d4d4d8" font-size="9" font-weight="600" font-family="monospace" text-anchor="middle">LAYER 3</text>
+    <text x="110" y="28" fill="#f4f4f5" font-size="13" font-weight="600" letter-spacing="-0.01em">
+      Hybrid Data Balancing Strategy (Post-Split Training Space)
+    </text>
+
+    <!-- Box 3.1: Undersampling -->
+    <g transform="translate(16, 42)">
+      <rect width="290" height="46" rx="8" fill="url(#card-dark)" stroke="#3f3f46" stroke-width="1" />
+      <text x="14" y="19" fill="#f4f4f5" font-size="11" font-weight="600">50% Random Undersampling</text>
+      <text x="14" y="34" fill="#8e8e93" font-size="9.5">34.671 kelas normal disederhanakan ke 17.336 record</text>
+    </g>
+
+    <path d="M 316 65 L 344 65" stroke="#10b981" stroke-width="1.5" marker-end="url(#arrow-emerald)" />
+
+    <!-- Box 3.2: Parallel Oversampling -->
+    <g transform="translate(354, 42)">
+      <rect width="420" height="46" rx="8" fill="url(#card-emerald)" stroke="#10b981" stroke-width="1" />
+      <text x="14" y="19" fill="#34d399" font-size="11" font-weight="600">Hybrid Parallel Oversampling Minoritas (+17.184 Sampel)</text>
+      <text x="14" y="34" fill="#a7f3d0" font-size="9.5">SMOTE (5.728 sampel) · ADASYN (5.712 sampel) · GAN (5.744 sampel)</text>
+    </g>
+
+    <path d="M 784 65 L 812 65" stroke="#10b981" stroke-width="1.5" marker-end="url(#arrow-emerald)" />
+
+    <!-- Box 3.3: Balanced Space 1:1 -->
+    <g transform="translate(822, 42)">
+      <rect width="272" height="46" rx="8" fill="url(#card-dark)" stroke="#3f3f46" stroke-width="1" />
+      <text x="14" y="19" fill="#f4f4f5" font-size="11" font-weight="600">Ruang Pelatihan Seimbang 1 : 1</text>
+      <text x="14" y="34" fill="#8e8e93" font-size="9.5">17.336 Normal vs 17.336 Malicious (Total 34.672)</text>
+    </g>
+  </g>
+
+  <!-- Connect Layer 3 to Layer 4 -->
+  <path d="M 600 431 L 600 446" stroke="#a855f7" stroke-width="1.5" marker-end="url(#arrow-purple)" />
+
+  <!-- ============================================================== -->
+  <!-- LAYER 4: METAHEURISTIC BGWO FEATURE SELECTION -->
+  <!-- ============================================================== -->
+  <g transform="translate(45, 449)">
+    <rect width="1110" height="105" rx="12" fill="#111114" stroke="#27272a" stroke-width="1" />
+    
+    <!-- Layer Label -->
+    <rect x="16" y="14" width="85" height="20" rx="4" fill="#18181c" stroke="#3f3f46" stroke-width="0.75" />
+    <text x="58" y="28" fill="#d4d4d8" font-size="9" font-weight="600" font-family="monospace" text-anchor="middle">LAYER 4</text>
+    <text x="110" y="28" fill="#f4f4f5" font-size="13" font-weight="600" letter-spacing="-0.01em">
+      Metaheuristic Binary Grey Wolf Optimizer (BGWO) Feature Selection
+    </text>
+
+    <!-- Box 4.1: 20 Search Agents -->
+    <g transform="translate(16, 42)">
+      <rect width="290" height="51" rx="8" fill="url(#card-dark)" stroke="#3f3f46" stroke-width="1" />
+      <text x="14" y="19" fill="#f4f4f5" font-size="11" font-weight="600">20 Serigala Pencari (Agents)</text>
+      <text x="14" y="33" fill="#8e8e93" font-size="9.5">Eksplorasi posisi biner dipimpin Alpha, Beta, Delta</text>
+      <text x="14" y="45" fill="#8e8e93" font-size="9">Konvergensi optimal di iterasi ke-14 (Early stopping 8)</text>
+    </g>
+
+    <path d="M 316 67 L 344 67" stroke="#a855f7" stroke-width="1.5" marker-end="url(#arrow-purple)" />
+
+    <!-- Box 4.2: Fitness Function -->
+    <g transform="translate(354, 42)">
+      <rect width="360" height="51" rx="8" fill="url(#card-purple)" stroke="#a855f7" stroke-width="1" />
+      <text x="14" y="19" fill="#e9d5ff" font-size="11" font-weight="600">Objective Fitness F2-Score &amp; Parsimoni</text>
+      <text x="14" y="33" fill="#c084fc" font-size="9.5">Fitness = 0.99 · F2(Validasi) + 0.01 · (1 - |Fitur|/36)</text>
+      <text x="14" y="45" fill="#d8b4fe" font-size="9">Prioritas tinggi pada Recall untuk meminimalkan lolosnya ancaman</text>
+    </g>
+
+    <path d="M 724 67 L 752 67" stroke="#a855f7" stroke-width="1.5" marker-end="url(#arrow-purple)" />
+
+    <!-- Box 4.3: 8 Selected Features -->
+    <g transform="translate(762, 42)">
+      <rect width="332" height="51" rx="8" fill="url(#card-dark)" stroke="#3f3f46" stroke-width="1" />
+      <text x="14" y="19" fill="#f4f4f5" font-size="11" font-weight="600">8 Fitur Terpilih (Reduksi 77.8%)</text>
+      <text x="14" y="33" fill="#10b981" font-size="9.5" font-weight="500">USB: Spc1con, Device1num · File: Spc1file</text>
+      <text x="14" y="45" fill="#38bdf8" font-size="9">Web: URLs1, URLs0 (Luar Jam) · Email: Spc1, in/out</text>
+    </g>
+  </g>
+
+  <!-- Connect Layer 4 to Layer 5 -->
+  <path d="M 600 554 L 600 569" stroke="#0A84FF" stroke-width="1.5" marker-end="url(#arrow-blue)" />
+
+  <!-- ============================================================== -->
+  <!-- LAYER 5: LIGHTGBM CLASSIFIER & SOC ANALYST PROTOTYPE -->
+  <!-- ============================================================== -->
+  <g transform="translate(45, 572)">
+    <rect width="1110" height="98" rx="12" fill="url(#card-blue)" stroke="#0A84FF" stroke-width="1" />
+    
+    <!-- Layer Label -->
+    <rect x="16" y="14" width="85" height="20" rx="4" fill="#0A84FF" stroke="#38bdf8" stroke-width="0.75" />
+    <text x="58" y="28" fill="#ffffff" font-size="9" font-weight="700" font-family="monospace" text-anchor="middle">LAYER 5</text>
+    <text x="110" y="28" fill="#ffffff" font-size="13" font-weight="600" letter-spacing="-0.01em">
+      LightGBM GBDT Inference Engine &amp; Streamlit SOC Analyst Operations
+    </text>
+
+    <!-- Box 5.1: LightGBM Core -->
+    <g transform="translate(16, 42)">
+      <rect width="280" height="44" rx="8" fill="#111114" stroke="#3f3f46" stroke-width="1" />
+      <text x="14" y="19" fill="#f4f4f5" font-size="11" font-weight="600">LightGBM GBDT Default Engine</text>
+      <text x="14" y="32" fill="#8e8e93" font-size="9.5">Tuned Threshold: 0.9569 (F2-Optimal)</text>
+    </g>
+
+    <!-- Box 5.2: Evaluation Metrics -->
+    <g transform="translate(306, 42)">
+      <rect width="460" height="44" rx="8" fill="#111114" stroke="#0A84FF" stroke-width="1" />
+      <text x="14" y="18" fill="#38bdf8" font-size="11" font-weight="600">Metrik Evaluasi Data Uji Independen (12.012 Records)</text>
+      <text x="14" y="32" fill="#f4f4f5" font-size="9.5">
+        Precision: <tspan fill="#34d399" font-weight="600">84.62%</tspan> · Recall: <tspan fill="#34d399" font-weight="600">86.27%</tspan> · F1: <tspan fill="#34d399" font-weight="600">85.44%</tspan> · MCC: <tspan fill="#34d399" font-weight="600">0.8538</tspan> · AUC: <tspan fill="#34d399" font-weight="600">0.9894</tspan>
+      </text>
+    </g>
+
+    <!-- Box 5.3: Streamlit Interface -->
+    <g transform="translate(776, 42)">
+      <rect width="318" height="44" rx="8" fill="#111114" stroke="#3f3f46" stroke-width="1" />
+      <text x="14" y="19" fill="#f4f4f5" font-size="11" font-weight="600">Streamlit SOC Analyst Dashboard</text>
+      <text x="14" y="32" fill="#8e8e93" font-size="9.5">Deteksi Batch CSV &amp; Simulasi Risiko Karyawan Manual</text>
+    </g>
+  </g>
+
+  <!-- ============================================================== -->
+  <!-- FOOTER BADGES & METADATA -->
+  <!-- ============================================================== -->
+  <g transform="translate(45, 688)">
+    <!-- Badge 1: Anti-Leakage -->
+    <g transform="translate(0, 0)">
+      <rect width="215" height="24" rx="12" fill="#111114" stroke="#0A84FF" stroke-width="0.75" />
+      <circle cx="12" cy="12" r="3.5" fill="#0A84FF" />
+      <text x="24" y="16" fill="#f4f4f5" font-size="10" font-weight="500">Strict Pre-Split Boundary (No Leakage)</text>
+    </g>
+
+    <!-- Badge 2: Extreme Imbalance -->
+    <g transform="translate(230, 0)">
+      <rect width="210" height="24" rx="12" fill="#111114" stroke="#d97706" stroke-width="0.75" />
+      <circle cx="12" cy="12" r="3.5" fill="#f59e0b" />
+      <text x="24" y="16" fill="#f4f4f5" font-size="10" font-weight="500">Hybrid SMOTE-ADASYN-GAN (1:1)</text>
+    </g>
+
+    <!-- Badge 3: BGWO Dimension Reduction -->
+    <g transform="translate(455, 0)">
+      <rect width="215" height="24" rx="12" fill="#111114" stroke="#a855f7" stroke-width="0.75" />
+      <circle cx="12" cy="12" r="3.5" fill="#c084fc" />
+      <text x="24" y="16" fill="#f4f4f5" font-size="10" font-weight="500">BGWO Feature Pruning (36 → 8, -77.8%)</text>
+    </g>
+
+    <!-- Badge 4: Production SOC Prototype -->
+    <g transform="translate(685, 0)">
+      <rect width="215" height="24" rx="12" fill="#111114" stroke="#10b981" stroke-width="0.75" />
+      <circle cx="12" cy="12" r="3.5" fill="#34d399" />
+      <text x="24" y="16" fill="#f4f4f5" font-size="10" font-weight="500">SOC Analyst Streamlit Prototype</text>
+    </g>
+
+    <!-- Academic Meta -->
+    <text x="1110" y="16" fill="#8e8e93" font-size="10" font-family="monospace" text-anchor="end">
+      Undergraduate Thesis · Universitas Negeri Semarang
+    </text>
+  </g>
+</svg>

@@ -30,6 +30,33 @@
     "architectureDiagram": "/images/projects/brewlab-architecture.svg"
   },
   {
+    "id": "project-3",
+    "slug": "insider-threat-detection",
+    "title": "Optimasi LightGBM & BGWO untuk Deteksi Insider Threat",
+    "description": "Framework deteksi ancaman orang dalam berbasis machine learning pada data CERT r4.2 dengan seleksi fitur metaheuristik dan penyeimbangan kelas ekstrem.",
+    "fullDescription": "Penelitian skripsi komputasi cerdas dan cybersecurity yang memecahkan masalah deteksi insider threat pada dataset CERT r4.2 (60.060 record harian dengan ketimpangan kelas ekstrem 1:236). Mengusulkan pipeline terintegrasi mulai dari feature engineering 36 atribut perilaku, isolasi pra-pemrosesan anti-kebocoran data, pembersihan noise 3-Sigma dan t-SNE-DBSCAN, penyeimbangan hybrid SMOTE-ADASYN-GAN, hingga seleksi fitur Binary Grey Wolf Optimizer (BGWO). Model dievaluasi menggunakan LightGBM dan diimplementasikan ke dalam prototipe antarmuka analis keamanan berbasis Streamlit.",
+    "challenges": "Mendeteksi anomali pada rasio ketimpangan ekstrem di mana aktivitas jahat hanya 0,42% dari populasi, sekaligus menghindari jebakan overfitting dan data leakage yang sering terjadi pada penelitian sejenis akibat penerapan scaling, reduksi dimensi t-SNE, dan oversampling sebelum pembagian dataset (train-test split). Tantangan lainnya adalah menyingkirkan korelasi fitur yang redundan dari 5 domain log (logon, device, file, http, email) tanpa menurunkan daya deteksi ancaman.",
+    "solutions": "Menerapkan protokol evaluasi ketat dengan stratified train-val-test split di awal sebelum scaling dan pembersihan outlier. Penyeimbangan hybrid diterapkan pasca-split hanya pada data training hingga rasio 1:1. Mengembangkan algoritma seleksi fitur BGWO dengan fungsi objektif berbasis F2-Score dan penalti parsimoni yang memangkas 77,8% fitur (dari 36 menjadi 8 fitur inti). Model final mencapai Precision 0,8462, Recall 0,8627, F1-Score 0,8544, MCC 0,8538, dan AUC-ROC 0,9894 pada data uji yang belum pernah dilihat, mengungguli baseline standar secara stabil.",
+    "technologies": [
+      "Python",
+      "LightGBM",
+      "Grey Wolf Optimizer (GWO)",
+      "Scikit-learn",
+      "SMOTE & ADASYN",
+      "GAN",
+      "t-SNE & DBSCAN",
+      "Streamlit",
+      "Cybersecurity"
+    ],
+    "image": "/images/projects/insider-threat-detection.jpg",
+    "demoUrl": "",
+    "githubUrl": "https://github.com/aettinata",
+    "category": "AI",
+    "date": "2026-07",
+    "featured": true,
+    "architectureDiagram": "/images/projects/insider-threat-architecture.svg"
+  },
+  {
     "id": "project-1",
     "slug": "portfolio-website",
     "title": "Portofolio Website",
