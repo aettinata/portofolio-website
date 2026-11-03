@@ -1,5 +1,34 @@
 [
   {
+    "id": "project-2",
+    "slug": "brewlab",
+    "title": "BREWLAB — Specialty Coffee Roastery & Digital Lab",
+    "description": "Platform web full-stack untuk specialty coffee roastery, memadukan katalog sensorik presisi, sistem manajemen konten multi-peran, dan layer data tahan cold-start.",
+    "fullDescription": "Aplikasi web enterprise untuk coffee roastery modern yang mencakup etalase publik bilingual (EN/ID) dan back-office admin. Sistem ini memvisualisasikan parameter teknis seduh—seperti skor cupping SCA 88.5+, rasio ekstraksi, dan profil sangrai—ke dalam antarmuka yang bersih. Seluruh mutasi data ditangani lewat Next.js Server Actions dengan arsitektur relasional PostgreSQL dan Prisma ORM.",
+    "challenges": "Menata data sensorik kopi yang padat (skor SCA, profil ketinggian tanam, resep ekstraksi) agar tetap mudah dicerna di layar ponsel dan memenuhi standar aksesibilitas WCAG 2.1 AA dalam dua bahasa. Tantangan kedua adalah mengunci rute admin untuk 5 peran pengguna berbeda, sekaligus mencegah error layar putih saat database serverless Neon mengalami cold-start.",
+    "solutions": "Membangun proteksi 4 lapis (Edge Middleware, page guard, validasi Server Actions via Zod, dan filter UI) dengan Auth.js v5 serta proteksi CSRF. Masalah cold-start diselesaikan dengan layer fallback mandiri (fallback-data.ts) dan caching service worker PWA agar aplikasi tetap menyajikan katalog saat offline. Stabilitas kode diverifikasi melalui 30 unit test Vitest dan automasi browser Playwright.",
+    "technologies": [
+      "Next.js 16",
+      "React 19",
+      "TypeScript",
+      "Tailwind CSS v4",
+      "PostgreSQL",
+      "Prisma ORM",
+      "Auth.js v5",
+      "Framer Motion",
+      "Zod",
+      "Vitest",
+      "Playwright",
+      "PWA"
+    ],
+    "image": "/images/projects/brewlab.jpg",
+    "demoUrl": "https://brewlabcafe.vercel.app",
+    "githubUrl": "https://github.com/aettinata/BrewLab",
+    "category": "Web",
+    "date": "2026-10",
+    "featured": true
+  },
+  {
     "id": "project-1",
     "slug": "portfolio-website",
     "title": "Portofolio Website",
