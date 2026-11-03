@@ -70,7 +70,7 @@ export function BentoGrid({ className }: BentoGridProps) {
             </span>
             <div className="space-y-4 my-auto py-3">
               <div>
-                <div className="text-2xl font-bold text-text-primary tracking-tight">4</div>
+                <div className="text-2xl font-bold text-text-primary tracking-tight">3</div>
                 <div className="text-xs text-text-secondary mt-0.5">Proyek Riset &amp; Produksi</div>
               </div>
               <div>

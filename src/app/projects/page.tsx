@@ -23,7 +23,7 @@ export default function ProjectsPage() {
           <p className="text-body text-text-secondary">Eksplorasi teknis dan visual dari proyek-proyek terbaru saya.</p>
         </div>
         <AnimatedTabs 
-          tabs={["Semua", "Web", "Mobile", "AI"]} 
+          tabs={["Semua", "Web", "AI"]} 
           activeTab={activeTab} 
           onChange={setActiveTab} 
         />

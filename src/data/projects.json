@@ -57,31 +57,6 @@
     "architectureDiagram": "/images/projects/insider-threat-architecture.svg"
   },
   {
-    "id": "project-4",
-    "slug": "winstock",
-    "title": "Winstock — Aplikasi Manajemen Keuangan & Inventaris Koperasi",
-    "description": "Aplikasi Android native offline-first untuk digitalisasi pembukuan kas dan kontrol stok UMKM Koperasi Merah Putih Wonolopo.",
-    "fullDescription": "Aplikasi mobile Android native yang dirancang khusus untuk memodernisasi pembukuan kas dan rantai pasok inventaris Koperasi Merah Putih serta pelaku UMKM di Kelurahan Wonolopo, Kota Semarang (Program KKN GIAT 13 UNNES). Dibangun dengan arsitektur MVVM berbasis Kotlin dan Jetpack Compose Material 3, Winstock mengadopsi penyimpanan lokal Realm NoSQL berlatensi nol tanpa ketergantungan jaringan internet. Aplikasi ini mengintegrasikan pencatatan kas harian dengan inventaris stok bahan secara real-time dan menyajikan tren keuangan melalui visualisasi grafik interaktif Vico Charts.",
-    "challenges": "Pelaku UMKM dan pengelola koperasi di lapangan sering menghadapi koneksi internet yang tidak stabil serta kesulitan merekonsiliasi pengeluaran kas manual saat melakukan restock bahan baku. Diperlukan sistem yang sepenuhnya offline-first, cepat, dan secara otomatis menyinkronkan mutasi barang masuk dengan catatan buku kas pengeluaran tanpa menuntut pencatatan ganda.",
-    "solutions": "Menerapkan database embedded Realm Kotlin 3.0.0 dengan query reaktif StateFlow untuk performa baca/tulis instan tanpa server luar. Mengembangkan fitur atomic sync 'Record in Financial Report' yang secara otomatis menerbitkan entitas Expense dan memperbarui saldo kas BalanceEntry setiap kali restock barang dicatat. Dilengkapi sistem deteksi dini Low Stock Alert, pengelompokan transaksi periodik (recurrence), multi-currency, serta analitik visual interaktif berbasis Vico Compose Charts.",
-    "technologies": [
-      "Kotlin 2.0",
-      "Jetpack Compose",
-      "Material 3",
-      "Realm DB",
-      "MVVM Architecture",
-      "Vico Charts",
-      "Android SDK 35"
-    ],
-    "image": "/images/projects/winstock.jpg",
-    "demoUrl": "",
-    "githubUrl": "https://github.com/aettinata",
-    "category": "Mobile",
-    "date": "2025-11",
-    "featured": true,
-    "architectureDiagram": "/images/projects/winstock-architecture.svg"
-  },
-  {
     "id": "project-1",
     "slug": "portfolio-website",
     "title": "Portofolio Website",
