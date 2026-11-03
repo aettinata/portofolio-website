@@ -43,6 +43,8 @@ export interface Certification {
   credentialId?: string;
   credentialUrl?: string;
   image?: string;
+  description?: string;
+  skills?: string[];
 }
 
 // Profile Type

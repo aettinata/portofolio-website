@@ -42,7 +42,10 @@ const projectsSummary = (projectsData as Project[])
   .join("\n");
 
 const certsSummary = (certificationsData as Certification[])
-  .map((c) => `- ${c.name} oleh ${c.issuer} (${c.issueDate})`)
+  .map(
+    (c) =>
+      `- ${c.name} oleh ${c.issuer} (${c.issueDate})${c.credentialId ? ` [ID: ${c.credentialId}]` : ""}${c.description ? `: ${c.description}` : ""}${c.skills && c.skills.length > 0 ? ` (Kompetensi: ${c.skills.join(", ")})` : ""}`
+  )
   .join("\n");
 
 const SYSTEM_PROMPT = `
