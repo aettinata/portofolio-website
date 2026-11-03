@@ -47,16 +47,41 @@ export interface Certification {
   skills?: string[];
 }
 
+// Experience Type
+export interface Experience {
+  role: string;
+  company: string;
+  year: string;
+  description: string;
+}
+
 // Profile Type
 export interface Profile {
   name: string;
   title: string;
   tagline: string;
   bio: string;
+  email: string;
+  location: string;
+  social: {
+    github: string;
+    linkedin: string;
+    twitter?: string;
+  };
   education: Array<{
     degree: string;
     institution: string;
     year: string;
+    gpa?: string;
+    honors?: string;
+    description?: string;
+  }>;
+  experience?: Experience[];
+  achievements?: Array<{
+    title: string;
+    score?: string;
+    year?: string;
+    description?: string;
   }>;
   skills: string[];
   interests: string[];

@@ -31,7 +31,18 @@ function checkRateLimit(ip: string): boolean {
 }
 
 const educationSummary = profileData.education
-  .map((e) => `- ${e.degree} di ${e.institution} (${e.year})`)
+  .map(
+    (e) =>
+      `- ${e.degree} di ${e.institution} (${e.year})${e.honors ? ` [Predikat: ${e.honors}, IPK: ${e.gpa}]` : ""}${e.description ? `. ${e.description}` : ""}`
+  )
+  .join("\n");
+
+const experienceSummary = (profileData.experience || [])
+  .map((exp) => `- ${exp.role} di ${exp.company} (${exp.year}): ${exp.description}`)
+  .join("\n");
+
+const achievementsSummary = (profileData.achievements || [])
+  .map((a) => `- ${a.title} (${a.year}): Skor ${a.score}. ${a.description}`)
   .join("\n");
 
 const projectsSummary = (projectsData as Project[])
@@ -80,6 +91,12 @@ ${profileData.skills.join(", ")}
 
 PENDIDIKAN:
 ${educationSummary}
+
+PENGALAMAN KERJA & ORGANISASI:
+${experienceSummary}
+
+PENCAPAIAN & KEMAHIRAN BAHASA:
+${achievementsSummary}
 
 AKTIVITAS TERKINI (NOW):
 - Sedang Belajar: ${profileData.now.learning}

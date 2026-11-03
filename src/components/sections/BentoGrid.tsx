@@ -70,16 +70,16 @@ export function BentoGrid({ className }: BentoGridProps) {
             </span>
             <div className="space-y-4 my-auto py-3">
               <div>
+                <div className="text-2xl font-bold text-text-primary tracking-tight">4</div>
+                <div className="text-xs text-text-secondary mt-0.5">Proyek Riset &amp; Produksi</div>
+              </div>
+              <div>
+                <div className="text-2xl font-bold text-text-primary tracking-tight">9</div>
+                <div className="text-xs text-text-secondary mt-0.5">Sertifikasi Resmi</div>
+              </div>
+              <div>
                 <div className="text-2xl font-bold text-text-primary tracking-tight">10+</div>
-                <div className="text-xs text-text-secondary mt-0.5">Proyek Diselesaikan</div>
-              </div>
-              <div>
-                <div className="text-2xl font-bold text-text-primary tracking-tight">6+</div>
                 <div className="text-xs text-text-secondary mt-0.5">Teknologi Modern</div>
-              </div>
-              <div>
-                <div className="text-2xl font-bold text-text-primary tracking-tight">2+</div>
-                <div className="text-xs text-text-secondary mt-0.5">Sertifikasi Cloud/Data</div>
               </div>
             </div>
           </div>
@@ -123,8 +123,13 @@ export function BentoGrid({ className }: BentoGridProps) {
                     <h4 className="text-lg font-semibold text-text-primary tracking-tight">
                       {edu?.degree || "S1 Teknik Informatika"}
                     </h4>
-                    <p className="text-sm text-text-secondary mt-1">
-                      {edu?.institution || "Universitas Negeri Semarang"}
+                    <p className="text-sm text-text-secondary mt-1 flex flex-wrap items-center gap-2">
+                      <span>{edu?.institution || "Universitas Negeri Semarang"}</span>
+                      {edu?.honors && (
+                        <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-medium bg-bg-primary border border-border/80 text-text-primary">
+                          {edu.honors} (IPK {edu.gpa})
+                        </span>
+                      )}
                     </p>
                   </div>
                   <span className="text-xs text-text-secondary px-3 py-1 rounded-full bg-bg-primary/50 border border-border/50 shrink-0">
@@ -132,7 +137,7 @@ export function BentoGrid({ className }: BentoGridProps) {
                   </span>
                 </div>
                 <p className="text-xs sm:text-sm text-text-secondary mt-4 leading-relaxed">
-                  Fondasi komputasi komprehensif mencakup Algoritma & Struktur Data, Rekayasa Perangkat Lunak, Jaringan Komputer, dan Basis Data.
+                  {edu?.description || "Fondasi komputasi komprehensif mencakup Algoritma & Struktur Data, Rekayasa Perangkat Lunak, Jaringan Komputer, dan Basis Data."}
                 </p>
               </div>
             </div>

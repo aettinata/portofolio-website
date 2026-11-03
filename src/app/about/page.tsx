@@ -8,20 +8,7 @@ import profileData from "@/data/profile.json";
 import Image from "next/image";
 
 export default function AboutPage() {
-  const experienceData = [
-    {
-      role: "Freelance Web Developer",
-      company: "Self-Employed",
-      year: "2026 — SEKARANG",
-      description: "Membangun berbagai aplikasi web modern menggunakan Next.js dan ekosistem React. Berfokus pada performa, aksesibilitas, dan desain UI/UX yang premium."
-    },
-    {
-      role: "Frontend Developer Intern",
-      company: "Tech Startup Inc.",
-      year: "2025",
-      description: "Membantu migrasi sistem lama ke React, mengimplementasikan design system baru, dan meningkatkan skor Core Web Vitals hingga 90+."
-    }
-  ];
+  const experienceData = profileData.experience || [];
 
   return (
     <div className="container mx-auto max-w-[1024px] px-6 sm:px-12 py-12 md:py-24 bg-bg-primary">
@@ -32,7 +19,7 @@ export default function AboutPage() {
               Tentang Saya
             </h1>
             <p className="text-body text-text-secondary leading-relaxed text-base sm:text-lg">
-              {profileData.bio} Saya berfokus pada perpaduan antara desain antarmuka yang estetis dan performa sistem yang optimal.
+              {profileData.bio}
             </p>
           </div>
           <div className="shrink-0">

@@ -2,7 +2,7 @@
   "name": "Faisal Adama",
   "title": "Fresh Graduate IT | Full-Stack Developer & AI Enthusiast",
   "tagline": "Membangun solusi digital yang berdampak — dari web modern hingga sistem cerdas.",
-  "bio": "Lulusan S1 Teknik Informatika dengan minat mendalam pada pengembangan web modern, aplikasi mobile, machine learning, dan rekayasa data. Berfokus pada perpaduan antara estetika antarmuka, performa sistem, dan pemanfaatan AI untuk menghasilkan produk digital yang skalabel dan berdampak.",
+  "bio": "Lulusan S1 Teknik Informatika Universitas Negeri Semarang (IPK 3.72, Cum Laude) dengan minat mendalam pada pengembangan web modern, aplikasi mobile Android, dan rekayasa machine learning. Berpengalaman membangun aplikasi web enterprise, sistem machine learning deteksi keamanan siber, serta digitalisasi operasional UMKM melalui rekayasa perangkat lunak yang presisi.",
   "email": "aettinata@gmail.com",
   "location": "Semarang, Indonesia",
   "social": {
@@ -14,28 +14,53 @@
     {
       "degree": "S1 Teknik Informatika",
       "institution": "Universitas Negeri Semarang",
-      "year": "2022-2026"
+      "year": "2022 — 2026",
+      "gpa": "3.72 / 4.00",
+      "honors": "Cum Laude",
+      "description": "Lulus dengan predikat Cum Laude (IPK 3.72). Skripsi berfokus pada optimasi LightGBM menggunakan Binary Grey Wolf Optimizer dan Hybrid Balancing untuk deteksi insider threat."
+    }
+  ],
+  "experience": [
+    {
+      "role": "Project Leader & Mobile Developer",
+      "company": "KKN GIAT 13 UNNES (Kelurahan Wonolopo, Semarang)",
+      "year": "Sep 2025 — Nov 2025",
+      "description": "Memimpin tim pengabdian masyarakat dan mengembangkan aplikasi Android native Winstock (Kotlin, Jetpack Compose, Realm DB) untuk digitalisasi pembukuan kas dan stok inventaris Koperasi Merah Putih."
+    },
+    {
+      "role": "IT Support Intern",
+      "company": "PT PLN (Persero) UP3 Semarang",
+      "year": "Feb 2025 — Jul 2025",
+      "description": "Mengembangkan prototipe aplikasi pemesanan ruangan rapat berbasis Android Studio & Firebase, serta mendukung pemeliharaan infrastruktur TI, sistem jaringan, dan troubleshooting operasional."
+    }
+  ],
+  "achievements": [
+    {
+      "title": "TOEFL ITP",
+      "score": "570",
+      "year": "2025",
+      "description": "Skor kemahiran bahasa Inggris resmi institutional testing program."
     }
   ],
   "skills": [
     "TypeScript",
-    "React",
     "Next.js",
+    "React",
     "Tailwind CSS",
-    "Node.js",
     "Kotlin",
+    "Jetpack Compose",
     "Python",
-    "TensorFlow",
+    "LightGBM",
     "PostgreSQL",
-    "Docker"
+    "Prisma ORM"
   ],
   "interests": [
     "UI/UX Design",
     "Machine Learning",
     "Mobile Development",
     "Data Engineering",
-    "Open Source",
-    "Artificial Intelligence"
+    "Cybersecurity",
+    "Open Source"
   ],
   "now": {
     "learning": "Next.js 16, Kotlin Multiplatform & Deep Learning",
